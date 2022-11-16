@@ -4,5 +4,5 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-	<color name="SplashScreenColor">@android:color/holo_blue_dark</color>
+	<color name="SplashScreenColor">@color/abc_search_url_text_normal</color>
 </resources>

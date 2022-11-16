@@ -13,7 +13,7 @@
                        VerticalOptions="Start"
                        Rotation="90">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer />
+                        <TapGestureRecognizer Command="{Binding BackCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <StackLayout TranslationX="20">
@@ -29,8 +29,7 @@
                            CornerRadius="30"
                            ScaleY="0.8">
                         <StackLayout Orientation="Horizontal"
-                                     Spacing="20"
-                                     >
+                                     Spacing="20">
                             <Image Source="triangulo.png"
                                    Scale="1.2"
                                    TranslationY="3" />
@@ -46,55 +45,49 @@
                     <Label Text="Sitios turisticos"
                            FontSize="Medium" />
                     <Frame CornerRadius="20"
-                           HeightRequest="200"
+                           HeightRequest="250"
                            HorizontalOptions="Start"
                            WidthRequest="250"
                            BackgroundColor="#e8e8e8">
                         <ScrollView>
                             <StackLayout>
-                                <Label Text="hola" />
-                                <Button Text="hola"
+                                <Label Text="Casa de cultura
+                                       Dirección: del parque..."
+                                       FontAttributes="Bold" />
+                                <Button Text="Hotel San Pedro
+                                        Dirección: Área central..."
                                         TextColor="White"
                                         WidthRequest="600"
                                         HorizontalOptions="Start"
+                                        FontAttributes="Bold"
                                         BackgroundColor="#2952be"
+                                        TextTransform="None"
                                         Command="{Binding commandSiteInfo}" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-
-
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
-                                <Label Text="hola" />
+                                <Label Text="Iglesia Cátolica
+                                       Dirección: Costado oeste..."
+                                       FontAttributes="Bold" />
+                                <Label Text="AMLAE
+                                       Direccion: Costado Norte de..."
+                                       FontAttributes="Bold" />
+                                <Label Text="Pizza TOGO
+                                       Dirección: Costado este Keis..."
+                                       FontAttributes="Bold" />
+                                <Label Text="Molino
+                                       Dirección: Keiser University..."
+                                       FontAttributes="Bold" />
                             </StackLayout>
                         </ScrollView>
                     </Frame>
                     <Button Text="Aceptar"
                             BackgroundColor="#2952be"
-                            HorizontalOptions="EndAndExpand"
-                            Margin="0,0,50,0"
+                            HorizontalOptions="Center"
+                            Margin="200,60,50,0"
                             TextColor="White"
                             FontAttributes="Bold"
                             CornerRadius="20"
+                            WidthRequest="200"
                             Command="{Binding commandAceptar}" />
-
                 </StackLayout>
-                <Button Text="Historial de viajes"
-                        HorizontalOptions="Start"
-                        BackgroundColor="Transparent"
-                        TextColor="White"
-                        FontAttributes="Bold" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

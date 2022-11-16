@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Descubre_Nica.View;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +27,9 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Procesos
-        public async Task ProcesoAsyncrono()
+        public async Task Navegar()
         {
-            await DisplayAlert("titulo", "mensaje", "cancelar");
+            await Navigation.PushAsync(new HistorialPage());
         }
         public void ProcesoSimple()
         {
@@ -36,8 +37,8 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Comandos
-        public ICommand ProcesoAsyncCommand => new Command(async () => await ProcesoAsyncrono());
-        public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand NavHisPageCommand => new Command(async () => await Navegar());
+        public ICommand ProceCommand => new Command(ProcesoSimple);
         #endregion
 
     }

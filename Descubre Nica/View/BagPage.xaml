@@ -4,50 +4,59 @@
              x:Class="Descubre_Nica.View.BagPage"
              IconImageSource="GreenBag.png"
              BackgroundColor="#ffffff">
-    <ContentPage.Content >
+    <ContentPage.Content>
         <Grid x:Name="MainContent">
-            <StackLayout HorizontalOptions="Center" TranslationY="60">
-                <Label Text="DescubreNica"
-                            FontSize="Medium" 
-                            Scale="1.7" 
-                            FontAttributes="Bold"
-                            TextColor="#428D52"/>
+            <StackLayout HorizontalOptions="Center"
+                         TranslationY="60">
+                <Image Source="LogoCircle.png"
+                       BackgroundColor="#8D2540"
+                       HeightRequest="36"/>
             </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
                 <StackLayout VerticalOptions="CenterAndExpand">
                     <Label Text="¿A donde vamos hoy?"
-                                FontSize="Medium"
-                                Scale="1.3"
-                                HorizontalOptions="CenterAndExpand"
-                                TextColor="#696969"
-                                Margin="0,0,0,0"
-                                FontAttributes="Bold"/>
+                           FontSize="Medium"
+                           Scale="1.3"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="#696969"
+                           Margin="0,0,0,0"
+                           FontAttributes="Bold" />
                     <Button CornerRadius="20"
-                                Margin="0,20,0,0"
-                                Text="Planear gira"
-                                FontSize="Medium"
-                                TextColor="White"
-                                FontAttributes="Bold"
+                            Margin="0,20,0,0"
+                            Text="Planear gira"
+                            FontSize="Medium"
+                            TextColor="White"
+                            FontAttributes="Bold"
                             BackgroundColor="#e8e8e8"
-                                HorizontalOptions="Center"
+                            HorizontalOptions="Center"
                             Scale="1.1"
-                            Command="{Binding commandPlanearGira}"/>
+                            Command="{Binding commandPlanearGira}" />
                 </StackLayout>
-                <StackLayout Margin="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Fill">
-                    <Label Text="Podemos ir a..." HorizontalOptions="Fill" Margin="30,0,0,0"/>
+                <StackLayout Margin="0,20,0,0"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Fill">
+                    <Label Text="Podemos ir a..."
+                           HorizontalOptions="Fill"
+                           Margin="30,0,0,0" />
                     <Frame CornerRadius="20"
                            Scale="0.9"
                            BackgroundColor="#d9e494">
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="cuadrito.jpg" Aspect="Fill"/>
+                            <Image Source="cuadrito.jpg"
+                                   Aspect="Fill" />
                             <StackLayout>
-                                <Label Text="San Juan del Sur" FontSize="Title"/>
+                                <Label Text="San Juan del Sur"
+                                       FontSize="Title" />
                                 <Button Text="Aceptar"
                                         FontSize="Large"
                                         FontAttributes="Bold"
                                         TextColor="black"
                                         CornerRadius="20"
-                                        BackgroundColor="#e8e8e8" Opacity="0.87 " Scale="0.8"  VerticalOptions="EndAndExpand" />
+                                        BackgroundColor="#e8e8e8"
+                                        Opacity="0.87 "
+                                        Scale="0.8"
+                                        VerticalOptions="EndAndExpand" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>

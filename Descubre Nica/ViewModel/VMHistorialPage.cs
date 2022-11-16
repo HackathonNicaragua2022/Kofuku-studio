@@ -4,17 +4,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Descubre_Nica.View;
 
 namespace Descubre_Nica.ViewModel
 {
-    internal class VMSiteInfoPage:BaseViewModel
+    public class VMHistorialPage: BaseViewModel
     {
-
         #region Variables
         public string _Texto;
         #endregion
         #region Constructores
-        public VMSiteInfoPage(INavigation navigation)
+        public VMHistorialPage(INavigation navigation)
         {
             Navigation = navigation;
         }
@@ -27,9 +27,9 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Procesos
-        public async Task Volver()
+        public async Task ProcesoAsyncrono()
         {
-            await Navigation.PopAsync();
+            await DisplayAlert("titulo", "mensaje", "cancelar");
         }
         public void ProcesoSimple()
         {
@@ -37,9 +37,8 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Comandos
-        public ICommand BackCommand => new Command(async () => await Volver());
+        public ICommand ProcesoAsyncCommand => new Command(async () => await ProcesoAsyncrono());
         public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
         #endregion
-
     }
 }

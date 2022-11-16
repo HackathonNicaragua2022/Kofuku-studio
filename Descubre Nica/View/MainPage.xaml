@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Descubre_Nica.MainPage"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Descubre_Nica.MainPage"
             xmlns:local="clr-namespace:Descubre_Nica.View"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             NavigationPage.HasNavigationBar="False"
             android:TabbedPage.IsSwipePagingEnabled="True"
-            SelectedTabColor="#86E100">
+            BarBackgroundColor="#2952be"
+            SelectedTabColor="white"
+            UnselectedTabColor="white">
 
     <local:HomePage/>
     <local:BagPage/>

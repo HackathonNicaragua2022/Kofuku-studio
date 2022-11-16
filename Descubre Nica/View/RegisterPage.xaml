@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Descubre_Nica.View.RegisterPage">
+             x:Class="Descubre_Nica.View.RegisterPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#ffffff">
     <ContentPage.Content>
-        <StackLayout Background="#92D4A0"
+        <StackLayout 
                      Orientation="Vertical"
                      VerticalOptions="FillAndExpand">
-            <Label Text="Registrar Correo"
-                   TextColor="#FBFBFB"
+            <Label Text="Registrar usuario"
+                   TextColor="Black"
                    FontAttributes="Bold"
                    FontSize="30"
                    VerticalOptions="Center"
@@ -17,7 +19,8 @@
                    CornerRadius="30"
                    TranslationY="180"
                    Margin="50,0,50,0"
-                   HeightRequest="40">
+                   HeightRequest="40"
+                   BackgroundColor="#e8e8e8">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="LogUser.png"
                            HeightRequest="50"
@@ -35,7 +38,8 @@
                    CornerRadius="30"
                    TranslationY="200"
                    Margin="50,0,50,0"
-                   HeightRequest="40">
+                   HeightRequest="40"
+                   BackgroundColor="#e8e8e8">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="LogPassword.png"
                            HeightRequest="40"
@@ -57,10 +61,10 @@
                     HeightRequest="60"
                     HorizontalOptions="Center"
                     WidthRequest="200"
-                    BackgroundColor="#E2FFE8"
+                    BackgroundColor="#2952be"
                     FontAttributes="Bold"
                     FontSize="20"
-                    TextColor="#868686"
+                    TextColor="White"
                     Command="{Binding NavegarPagcommand}" />
         </StackLayout>
     </ContentPage.Content>

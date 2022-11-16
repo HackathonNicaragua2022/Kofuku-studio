@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Descubre_Nica.View.SelDptoPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="Fondo.Jpg">
+             BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid>
             <StackLayout TranslationX="10"
@@ -18,17 +18,19 @@
                 </Image>
                 <StackLayout TranslationX="20">
                     <Button CornerRadius="20"
-                            BackgroundColor="#61B071"
+                            BackgroundColor="#2952be"
                             Text="Elegir Departamento"
                             TextColor="White"
                             FontAttributes="Bold"
                             FontSize="Medium"
                             HorizontalOptions="Start" />
                     <Frame HorizontalOptions="Start"
+                           BackgroundColor="#e8e8e8"
                            CornerRadius="30"
                            ScaleY="0.8">
                         <StackLayout Orientation="Horizontal"
-                                     Spacing="20">
+                                     Spacing="20"
+                                     >
                             <Image Source="triangulo.png"
                                    Scale="1.2"
                                    TranslationY="3" />
@@ -46,13 +48,16 @@
                     <Frame CornerRadius="20"
                            HeightRequest="200"
                            HorizontalOptions="Start"
-                           WidthRequest="250">
+                           WidthRequest="250"
+                           BackgroundColor="#e8e8e8">
                         <ScrollView>
                             <StackLayout>
                                 <Label Text="hola" />
                                 <Button Text="hola"
+                                        TextColor="White"
                                         WidthRequest="600"
                                         HorizontalOptions="Start"
+                                        BackgroundColor="#2952be"
                                         Command="{Binding commandSiteInfo}" />
                                 <Label Text="hola" />
                                 <Label Text="hola" />
@@ -76,7 +81,7 @@
                         </ScrollView>
                     </Frame>
                     <Button Text="Aceptar"
-                            BackgroundColor="#61B071"
+                            BackgroundColor="#2952be"
                             HorizontalOptions="EndAndExpand"
                             Margin="0,0,50,0"
                             TextColor="White"

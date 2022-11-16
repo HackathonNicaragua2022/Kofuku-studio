@@ -4,7 +4,7 @@
              x:Class="Descubre_Nica.View.SettingsPage"
              NavigationPage.HasNavigationBar="False"
              IconImageSource="GreenSettings.png"
-             BackgroundImageSource="Fondo.jpg">
+             BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid x:Name="MainContent">
             <StackLayout>
@@ -14,7 +14,8 @@
                             FontAttributes="Bold"
                             TextColor="#428D52" HorizontalOptions="Center" TranslationY="60"/>
                 <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="50">
-                    <Frame CornerRadius="20" BackgroundColor="#60AF71" HeightRequest="230" WidthRequest="150" VerticalOptions="End">
+                    <Frame CornerRadius="20"
+                           BackgroundColor="#2952be" HeightRequest="230" WidthRequest="150" VerticalOptions="End">
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png"/>

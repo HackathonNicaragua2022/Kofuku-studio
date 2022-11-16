@@ -4,21 +4,21 @@
              x:Class="Descubre_Nica.View.HomePage"
              NavigationPage.HasNavigationBar="False"
              IconImageSource="greenHome"
-             BackgroundImageSource="Fondo.jpg">
+             BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid x:Name="MainContent">
             <StackLayout>
                 <StackLayout>
                     <StackLayout Margin="0,30,30,0" HorizontalOptions="End" VerticalOptions="Fill">
                         <Button Text=" Nivel 10"   
-                        FontSize="Medium" 
-                        BackgroundColor="#60AF71" 
-                        CornerRadius="20" 
-                        ScaleY="1"
-                        ScaleX="1.1"
-                        HorizontalOptions="Start"
-                        TextTransform="None"
-                        TextColor="WhiteSmoke"/>
+                                FontSize="Medium"
+                                BackgroundColor="#2952be" 
+                                CornerRadius="20" 
+                                ScaleY="1"
+                                ScaleX="1.1"
+                                HorizontalOptions="Start"
+                                TextTransform="None"
+                                TextColor="WhiteSmoke"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,-20,0,0" Scale="0.95">
@@ -64,7 +64,9 @@
                                    FontSize="Medium" 
                                    TextTransform="Uppercase" 
                                    FontAttributes="Bold"/>
-                        <Frame CornerRadius="40" Scale="0.8">
+                        <Frame CornerRadius="40"
+                               Scale="0.8"
+                               BackgroundColor="#e8e8e8">
                             <StackLayout HorizontalOptions="Fill">
                                 <Button CornerRadius="20" 
                                             Scale="0.8" 

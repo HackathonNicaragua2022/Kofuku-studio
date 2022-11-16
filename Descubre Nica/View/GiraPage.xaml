@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Descubre_Nica.View.GiraPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="Fondo.Jpg">
+             BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid x:Name="MainContent">
             <StackLayout AnchorX="20" TranslationY="60">

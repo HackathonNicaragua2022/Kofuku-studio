@@ -21,6 +21,7 @@ namespace Descubre_Nica.ViewModel
         #region Constructores
         public VMLogin(INavigation navigation)
         {
+            Transparente();
             Navigation = navigation;
         }
         #endregion
@@ -47,6 +48,10 @@ namespace Descubre_Nica.ViewModel
             {
                 await DisplayAlert("Alerta", "Llene todo los campos", "OK");
             }
+        }
+        public void Transparente()
+        {
+            DependencyService.Get<VMStatusBar>().Transparente();
         }
 
         public bool Validar()

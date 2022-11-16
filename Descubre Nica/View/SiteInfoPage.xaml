@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Descubre_Nica.View.SiteInfoPage"
-             BackgroundColor="#92d4a0"
+             BackgroundColor="#ffffff"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
@@ -27,19 +27,19 @@
                             <Button Text="¿Como Llegar?"
                                     TextColor="White"
                                     FontAttributes="Bold"
-                                    BackgroundColor="#59a268"
+                                    BackgroundColor="#2952be"
                                     CornerRadius="20"
                                     HorizontalOptions="End"/>
                             <Label Margin="0,10,0,0"
                                    Text="Descripcion" 
-                                   FontSize="20" 
-                                   TextColor="White" />
+                                   FontSize="20"
+                                   TextColor="#2952be" />
                             <Label BackgroundColor="#5A5A5A" 
                                    HorizontalOptions="Start" 
                                    HeightRequest="0.5"  
                                    WidthRequest="280"/>
                             <Label Text="Es un Hotel Boutique con exhibición permanente de pinturas y mesas …."
-                                   TextColor="#4b7e00"
+                                   TextColor="#2952be"
                                    WidthRequest="280"
                                    FontSize="16"/>
                         </StackLayout>

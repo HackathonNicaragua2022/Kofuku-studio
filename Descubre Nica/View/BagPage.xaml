@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Descubre_Nica.View.BagPage"
              IconImageSource="GreenBag.png"
-             BackgroundImageSource="Fondo.jpg">
+             BackgroundColor="#ffffff">
     <ContentPage.Content >
         <Grid x:Name="MainContent">
             <StackLayout HorizontalOptions="Center" TranslationY="60">
@@ -28,19 +28,26 @@
                                 FontSize="Medium"
                                 TextColor="White"
                                 FontAttributes="Bold"
-                                BackgroundColor="#60AF71"
+                            BackgroundColor="#e8e8e8"
                                 HorizontalOptions="Center"
                             Scale="1.1"
                             Command="{Binding commandPlanearGira}"/>
                 </StackLayout>
                 <StackLayout Margin="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Fill">
                     <Label Text="Podemos ir a..." HorizontalOptions="Fill" Margin="30,0,0,0"/>
-                    <Frame CornerRadius="20" Scale="0.9">
+                    <Frame CornerRadius="20"
+                           Scale="0.9"
+                           BackgroundColor="#d9e494">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="cuadrito.jpg" Aspect="Fill"/>
                             <StackLayout>
                                 <Label Text="San Juan del Sur" FontSize="Title"/>
-                                <Button Text="Aceptar" FontSize="Large" FontAttributes="Bold" TextColor="White" CornerRadius="20"  BackgroundColor="#63B072" Opacity="0.87 " Scale="0.8"  VerticalOptions="EndAndExpand" />
+                                <Button Text="Aceptar"
+                                        FontSize="Large"
+                                        FontAttributes="Bold"
+                                        TextColor="black"
+                                        CornerRadius="20"
+                                        BackgroundColor="#e8e8e8" Opacity="0.87 " Scale="0.8"  VerticalOptions="EndAndExpand" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Descubre_Nica.View.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             IconImageSource="greenHome"
+             BackgroundImageSource="Fondo.jpg">
+    <ContentPage.Content>
+        <Grid x:Name="MainContent">
+            <StackLayout>
+                <StackLayout>
+                    <StackLayout Margin="0,30,30,0" HorizontalOptions="End" VerticalOptions="Fill">
+                        <Button Text=" Nivel 10"   
+                        FontSize="Medium" 
+                        BackgroundColor="#60AF71" 
+                        CornerRadius="20" 
+                        ScaleY="1"
+                        ScaleX="1.1"
+                        HorizontalOptions="Start"
+                        TextTransform="None"
+                        TextColor="WhiteSmoke"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,-20,0,0" Scale="0.95">
+                        <Image Source="User.png" Margin="0,-20,0,0" />
+                        <StackLayout Margin="20,30,0,0" HorizontalOptions="Fill" VerticalOptions="Fill">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Nombre:" 
+                                       FontSize="Medium" 
+                                       TextColor="#696969"
+                                       FontAttributes="Bold"/>
+                                <Label Text="xxxxxxx" 
+                                       VerticalOptions="Center"
+                                       FontSize="Medium" 
+                                       TextColor="#696969"
+                                       FontAttributes="Bold"/>
+                            </StackLayout>
+                            <Label Text="xxxxxxxx" 
+                                       FontSize="Medium"  
+                                       TextColor="#696969" 
+                                       FontAttributes="Bold" />
+                            <Label Text="xxxxxx" 
+                                       FontSize="Medium"
+                                       TextColor="#696969"
+                                       FontAttributes="Bold"/>
+                            <Label Text="xxxxxxxxxx"
+                                       FontSize="Medium"
+                                       TextColor="#696969"
+                                       FontAttributes="Bold" />
+                            <Button Margin="-10,0,0,0" 
+                                        Text="Historial de viajes"   
+                                        FontSize="Medium" 
+                                        FontAttributes="Bold" 
+                                        BackgroundColor="Transparent" 
+                                        TextColor="White"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Scale="1" Margin="0,-20,0,0">
+                    <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                        <Label Text="Mis retos" Margin="40,10,0,-40"
+                                   TextColor="#696969"
+                                   FontSize="Medium" 
+                                   TextTransform="Uppercase" 
+                                   FontAttributes="Bold"/>
+                        <Frame CornerRadius="40" Scale="0.8">
+                            <StackLayout HorizontalOptions="Fill">
+                                <Button CornerRadius="20" 
+                                            Scale="0.8" 
+                                            BackgroundColor="LightGray" 
+                                            Margin="0,0,0,0" 
+                                            Text=""/>
+                                <Button CornerRadius="20" 
+                                            Scale="0.8" 
+                                            BackgroundColor="LightGray" 
+                                            Margin="0,0,0,0" 
+                                            Text=""/>
+                                <Button CornerRadius="20" 
+                                            Scale="0.8" 
+                                            BackgroundColor="LightGray" 
+                                            Margin="0,0,0,0" 
+                                            BindingContext=""/>
+                                <Button CornerRadius="20" 
+                                            Scale="0.8" 
+                                            BackgroundColor="LightGray" 
+                                            Margin="0,0,0,0" 
+                                            Text="" />
+                                <Button CornerRadius="20" 
+                                            Scale="0.8" 
+                                            BackgroundColor="LightGray" 
+                                            Margin="0,0,0,0"
+                                            Text="" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

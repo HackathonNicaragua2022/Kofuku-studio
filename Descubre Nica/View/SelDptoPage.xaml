@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Descubre_Nica.View.SelDptoPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="Fondo.Jpg">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout TranslationX="10"
+                         TranslationY="30">
+                <Image Source="FlechitaOscura.png"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       Rotation="90">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Image.GestureRecognizers>
+                </Image>
+                <StackLayout TranslationX="20">
+                    <Button CornerRadius="20"
+                            BackgroundColor="#61B071"
+                            Text="Elegir Departamento"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalOptions="Start" />
+                    <Frame HorizontalOptions="Start"
+                           CornerRadius="30"
+                           ScaleY="0.8">
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="20">
+                            <Image Source="triangulo.png"
+                                   Scale="1.2"
+                                   TranslationY="3" />
+                            <Label Text="San Marcos, Carazo"
+                                   FontSize="Medium"
+                                   ScaleY="1.3"
+                                   FontAttributes="Bold" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <StackLayout TranslationX="25"
+                             Margin="0,20,0,0">
+                    <Label Text="Sitios turisticos"
+                           FontSize="Medium" />
+                    <Frame CornerRadius="20"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"
+                           WidthRequest="250">
+                        <ScrollView>
+                            <StackLayout>
+                                <Label Text="hola" />
+                                <Button Text="hola"
+                                        WidthRequest="600"
+                                        HorizontalOptions="Start"
+                                        Command="{Binding commandSiteInfo}" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+
+
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                                <Label Text="hola" />
+                            </StackLayout>
+                        </ScrollView>
+                    </Frame>
+                    <Button Text="Aceptar"
+                            BackgroundColor="#61B071"
+                            HorizontalOptions="EndAndExpand"
+                            Margin="0,0,50,0"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="20"
+                            Command="{Binding commandAceptar}" />
+
+                </StackLayout>
+                <Button Text="Historial de viajes"
+                        HorizontalOptions="Start"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

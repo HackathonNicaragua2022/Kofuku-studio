@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Descubre_Nica.View.SettingsPage"
+             NavigationPage.HasNavigationBar="False"
+             IconImageSource="GreenSettings.png"
+             BackgroundImageSource="Fondo.jpg">
+    <ContentPage.Content>
+        <Grid x:Name="MainContent">
+            <StackLayout>
+                <Label Text="DescubreNica"
+                            FontSize="Medium" 
+                            Scale="1.7" 
+                            FontAttributes="Bold"
+                            TextColor="#428D52" HorizontalOptions="Center" TranslationY="60"/>
+                <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="50">
+                    <Frame CornerRadius="20" BackgroundColor="#60AF71" HeightRequest="230" WidthRequest="150" VerticalOptions="End">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Flechita.png"/>
+                                <Button Text="CONTACTO" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Flechita.png"/>
+                                <Button Text="Información" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Flechita.png"/>
+                                <Button Text="Ayuda" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

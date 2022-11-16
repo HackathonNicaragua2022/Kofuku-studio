@@ -1,39 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Descubre_Nica.Model;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Forms;
 using Descubre_Nica.View;
-using Descubre_Nica.Model;
+using Xamarin.Forms;
 
 namespace Descubre_Nica.ViewModel
 {
-    public class VMLogin : BaseViewModel
+    public class VMRegisterPage: BaseViewModel
     {
-
         #region Variables
-        public string _Usuario;
-        public string _contraseña;
-        public List<MLogin> listUsers { get; set; }
+        public string _Correo;
+        public string _Contraseña;
 
         #endregion
         #region Constructores
-        public VMLogin(INavigation navigation)
+        public VMRegisterPage(INavigation navigation)
         {
             Navigation = navigation;
         }
         #endregion
         #region Objetos
-        public string Usuario
+        public string Correo
         {
-            get { return _Usuario; }
-            set { SetValue(ref _Usuario, value); }
+            get { return _Correo; }
+            set { SetValue(ref _Correo, value); }
         }
         public string Contraseña
         {
-            get { return _contraseña; }
-            set { SetValue(ref _contraseña, value); }
+            get { return _Contraseña; }
+            set { SetValue(ref _Contraseña, value); }
         }
         #endregion
         #region Procesos
@@ -41,7 +39,7 @@ namespace Descubre_Nica.ViewModel
         {
             if (Validar())
             {
-                await Navigation.PushAsync(new MainPage());
+                await Navigation.PushAsync(new LoginPage());
             }
             else
             {
@@ -51,23 +49,16 @@ namespace Descubre_Nica.ViewModel
 
         public bool Validar()
         {
-            if (string.IsNullOrEmpty(Contraseña) || string.IsNullOrEmpty(Usuario))
+            if (string.IsNullOrEmpty(Contraseña) || string.IsNullOrEmpty(Correo))
             {
                 return false;
             }
             return true;
         }
 
-        public async Task NavRegisPage()
-        {
-            await Navigation.PushAsync(new RegisterPage());
-        }
-
         #endregion
         #region Comandos
         public ICommand NavegarPagcommand => new Command(async () => await Navegarpag());
-        public ICommand NavRegisPagecommand => new Command(async () => await NavRegisPage());
         #endregion
-
     }
 }

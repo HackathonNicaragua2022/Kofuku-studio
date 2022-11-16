@@ -67,13 +67,15 @@
                 FontAttributes="Bold"
                 FontSize="20"
                 TextColor="#868686"
-                Command="{Binding NavegarHomePagcommand}" />
-        <Label Text="Registrate"
+                Command="{Binding NavegarPagcommand}" />
+        <Button Text="Registrate"
                VerticalOptions="Center"
                HorizontalOptions="Center"
-               TranslationY="260"
                TextColor="#FFFFFF"
+                TranslationY="250"
                FontSize="18"
-               FontAttributes="Bold" />
+               FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Command="{Binding NavRegisPagecommand}"/>
     </StackLayout>
 </ContentPage>

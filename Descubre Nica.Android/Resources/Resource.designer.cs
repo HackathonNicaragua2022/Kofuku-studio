@@ -14,7 +14,7 @@ namespace Descubre_Nica.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.0.0.73")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
 	public partial class Resource
 	{
 		
@@ -22075,16 +22075,13 @@ namespace Descubre_Nica.Droid
 			public const int user = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int usuario = 2131165356;
+			public const int WhiteBag = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int WhiteBag = 2131165357;
+			public const int WhiteHome = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int WhiteHome = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int WhiteSettings = 2131165359;
+			public const int WhiteSettings = 2131165358;
 			
 			static Drawable()
 			{
@@ -24220,6 +24217,9 @@ namespace Descubre_Nica.Droid
 			
 			// aapt resource value: 0x7F0C0002
 			public const int launcher_foreground = 2131492866;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int LogoNombre = 2131492867;
 			
 			static Mipmap()
 			{

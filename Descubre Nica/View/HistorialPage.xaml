@@ -1,10 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Descubre_Nica.View.HistorialPage">
+             x:Class="Descubre_Nica.View.HistorialPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+        <Grid>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             BackgroundColor="White"
+                             HeightRequest="50">
+                    <ImageButton Source="flechitaOscura.png"
+                                 Rotation="90"
+                                 BackgroundColor="White"
+                                 TranslationX="5"
+                                 Command="{Binding BackCommand}" />
+                    <Label Text="Informacion del sitio"
+                           FontSize="20"
+                           HorizontalOptions="CenterAndExpand"
+                           TranslationY="10"
+                           TranslationX="-10" />
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout Margin="20,0,20,0">
+                        <Label Text="Granada" FontSize="Title"/>
+                        <Button Text="Ver mas"
+                                HorizontalOptions="Start"
+                                CornerRadius="20"
+                                BackgroundColor="White" />
+                        <Label Text="Masaya"
+                               FontSize="Title" />
+                        <Button Text="Ver mas"
+                                HorizontalOptions="Start"
+                                CornerRadius="20"
+                                BackgroundColor="White" />
+                        <Label Text="San Juan del Sur"
+                               FontSize="Title" />
+                        <Button Text="Ver mas"
+                                HorizontalOptions="Start"
+                                CornerRadius="20"
+                                BackgroundColor="White" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

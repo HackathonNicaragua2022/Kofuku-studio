@@ -103,16 +103,18 @@
                         </Frame>
                     </StackLayout>
                 </StackLayout>
+                <Button Margin="10,80,0,0"
+                        CornerRadius="20"
+                        Text="Historial de viajes"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="#696969"
+                        VerticalOptions="End"
+                        HorizontalOptions="Start"
+                        TranslationY="-100"
+                        Command="{Binding NavHisPageCommand}" />
             </StackLayout>
-            <Button Margin="10,0,0,0"
-                    Text="Historial de viajes"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    TextColor="#696969"
-                    VerticalOptions="End" 
-                    HorizontalOptions="Start"
-                    TranslationY="-100"
-                    Command="{Binding NavHisPageCommand}"/>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

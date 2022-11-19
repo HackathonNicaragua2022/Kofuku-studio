@@ -4,76 +4,79 @@
              x:Class="Descubre_Nica.View.LoginPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#ffffff">
-    <StackLayout Orientation="Vertical"
-                 VerticalOptions="FillAndExpand">
-        <Image Source="LogoNombre.png"
-               HeightRequest="100"
-               TranslationY="130" />
-        <Frame VerticalOptions="Center"
-               CornerRadius="30"
-               TranslationY="180"
-               Margin="50,0,50,0"
-               HeightRequest="40"
-               BackgroundColor="#e8e8e8">
-            <StackLayout Orientation="Horizontal">
-                <Image Source="User.png"
-                       HeightRequest="50"
-                       HorizontalOptions="Start" />
-                <Entry Placeholder="Usuario"
-                       PlaceholderColor="#496BC5"
-                       HorizontalOptions="FillAndExpand"
-                       Margin="30,0,0,0"
-                       TextColor="#496BC5"
-                       FontAttributes="Bold"
-                       Text="{Binding Usuario}" />
-            </StackLayout>
-        </Frame>
-        <Frame VerticalOptions="Center"
-               CornerRadius="30"
-               TranslationY="200"
-               Margin="50,0,50,0"
-               HeightRequest="40"
-               BackgroundColor="#e8e8e8">
-            <StackLayout Orientation="Horizontal">
-                <Image Source="LogPassword.png"
-                       HeightRequest="40"
-                       HorizontalOptions="Start" />
-                <Entry Placeholder="Contraseña"
-                       PlaceholderColor="#496BC5"
-                       HorizontalOptions="FillAndExpand"
-                       Margin="30,0,0,0"
-                       TextColor="#496BC5"
-                       FontAttributes="Bold"
-                       IsPassword="True"
-                       Text="{Binding Contraseña}" />
-            </StackLayout>
-        </Frame>
-        <Label Text="¿Has olvidado la contraseña?"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"
-               TranslationY="220"
-               TextColor="#A8A8A8"
-               FontSize="18" />
-        <Button Text="Iniciar Sesión"
-                TextColor="White"
-                Margin="90,0,90,0"
-                TextTransform="None"
-                TranslationY="240"
-                CornerRadius="20"
-                HeightRequest="60"
-                HorizontalOptions="Center"
-                WidthRequest="200"
-                BackgroundColor="#2952be"
-                FontAttributes="Bold"
-                FontSize="20"
-                Command="{Binding NavegarPagcommand}" />
-        <Button Text="Registrate"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                TextColor="#A8A8A8"
-                TranslationY="250"
-                FontSize="18"
-                BackgroundColor="Transparent"
-                Command="{Binding NavRegisPagecommand}" />
-    </StackLayout>
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView VerticalOptions="Center">
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="FillAndExpand"
+                             Spacing="20">
+                    <Image Source="LogoCircle.png"
+                           HeightRequest="100" 
+                           Margin="0,0,0,0"/>
+                    <Frame VerticalOptions="Center"
+                           CornerRadius="30"
+                           Margin="50,0,50,0"
+                           HeightRequest="40"
+                           BackgroundColor="#e8e8e8">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="User.png"
+                                   HeightRequest="50"
+                                   HorizontalOptions="Start" />
+                            <Entry Placeholder="Usuario"
+                                   PlaceholderColor="#496BC5"
+                                   HorizontalOptions="FillAndExpand"
+                                   Margin="30,0,0,0"
+                                   TextColor="#496BC5"
+                                   FontAttributes="Bold"
+                                   Text="{Binding Usuario}" />
+                        </StackLayout>
+                    </Frame>
+                    <Frame VerticalOptions="Center"
+                           CornerRadius="30"
+                           Margin="50,0,50,0"
+                           HeightRequest="40"
+                           BackgroundColor="#e8e8e8">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="LogPassword.png"
+                                   HeightRequest="40"
+                                   HorizontalOptions="Start" />
+                            <Entry Placeholder="Contraseña"
+                                   PlaceholderColor="#496BC5"
+                                   HorizontalOptions="FillAndExpand"
+                                   Margin="30,0,0,0"
+                                   TextColor="#496BC5"
+                                   FontAttributes="Bold"
+                                   IsPassword="True"
+                                   Text="{Binding Contraseña}" />
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="¿Has olvidado la contraseña?"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           TextColor="#A8A8A8"
+                           FontSize="18" />
+                    <Button Text="Iniciar Sesión"
+                            TextColor="White"
+                            Margin="90,0,90,0"
+                            TextTransform="None"
+                            CornerRadius="20"
+                            HeightRequest="60"
+                            HorizontalOptions="Center"
+                            WidthRequest="200"
+                            BackgroundColor="#2952be"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Command="{Binding NavegarPagcommand}" />
+                    <Button Text="Registrate"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            TextColor="#A8A8A8"
+                            FontSize="18"
+                            BackgroundColor="Transparent"
+                            Command="{Binding NavRegisPagecommand}" />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
+    

@@ -6,6 +6,6 @@
 	<item>
 		<color android:color="@color/SplashScreenColor"/>
 	</item>
-	<item android:drawable="@drawable/logocircle" android:width="350dp" android:height="80dp" android:gravity="center">
+	<item android:drawable="@drawable/logoorigin" android:width="80dp" android:height="80dp" android:gravity="center">
 	</item>
 </layer-list>

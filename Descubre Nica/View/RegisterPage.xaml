@@ -5,67 +5,68 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#ffffff">
     <ContentPage.Content>
-        <StackLayout 
-                     Orientation="Vertical"
-                     VerticalOptions="FillAndExpand">
-            <Label Text="Registrar usuario"
-                   TextColor="Black"
-                   FontAttributes="Bold"
-                   FontSize="30"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   TranslationY="150" />
-            <Frame VerticalOptions="Center"
-                   CornerRadius="30"
-                   TranslationY="180"
-                   Margin="50,0,50,0"
-                   HeightRequest="40"
-                   BackgroundColor="#e8e8e8">
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="LogUser.png"
-                           HeightRequest="50"
-                           HorizontalOptions="Start" />
-                    <Entry Placeholder="Correo"
-                           Keyboard="Email"
-                           PlaceholderColor="#5EAA6D"
-                           HorizontalOptions="FillAndExpand"
-                           Margin="30,0,0,0"
-                           TextColor="#5EAA6D"
-                           Text="{Binding Correo}" />
-                </StackLayout>
-            </Frame>
-            <Frame VerticalOptions="Center"
-                   CornerRadius="30"
-                   TranslationY="200"
-                   Margin="50,0,50,0"
-                   HeightRequest="40"
-                   BackgroundColor="#e8e8e8">
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="LogPassword.png"
-                           HeightRequest="40"
-                           HorizontalOptions="Start" />
-                    <Entry Placeholder="Contraseña"
-                           PlaceholderColor="#5EAA6D"
-                           HorizontalOptions="FillAndExpand"
-                           Margin="30,0,0,0"
-                           TextColor="#5EAA6D"
-                           IsPassword="True"
-                           Text="{Binding Contraseña}" />
-                </StackLayout>
-            </Frame>
-            <Button Text="Registrarse"
-                    Margin="90,0,90,0"
-                    TextTransform="None"
-                    TranslationY="240"
-                    CornerRadius="20"
-                    HeightRequest="60"
-                    HorizontalOptions="Center"
-                    WidthRequest="200"
-                    BackgroundColor="#2952be"
-                    FontAttributes="Bold"
-                    FontSize="20"
-                    TextColor="White"
-                    Command="{Binding NavegarPagcommand}" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand">
+                <Label Text="Registrate"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TranslationY="150" />
+                <Frame VerticalOptions="Center"
+                       CornerRadius="30"
+                       TranslationY="180"
+                       Margin="50,0,50,0"
+                       HeightRequest="40"
+                       BackgroundColor="#e8e8e8">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="User.png"
+                               HeightRequest="50"
+                               HorizontalOptions="Start" />
+                        <Entry Placeholder="Correo"
+                               Keyboard="Email"
+                               PlaceholderColor="#496BC5"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="30,0,0,0"
+                               TextColor="#496BC5"
+                               Text="{Binding Correo}" />
+                    </StackLayout>
+                </Frame>
+                <Frame VerticalOptions="Center"
+                       CornerRadius="30"
+                       TranslationY="200"
+                       Margin="50,0,50,0"
+                       HeightRequest="40"
+                       BackgroundColor="#e8e8e8">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="LogPassword.png"
+                               HeightRequest="40"
+                               HorizontalOptions="Start" />
+                        <Entry Placeholder="Contraseña"
+                               PlaceholderColor="#496BC5"
+                               HorizontalOptions="FillAndExpand"
+                               Margin="30,0,0,0"
+                               TextColor="#496BC5"
+                               IsPassword="True"
+                               Text="{Binding Contraseña}" />
+                    </StackLayout>
+                </Frame>
+                <Button Text="Registrarse"
+                        Margin="90,0,90,0"
+                        TextTransform="None"
+                        TranslationY="240"
+                        CornerRadius="20"
+                        HeightRequest="60"
+                        HorizontalOptions="Center"
+                        WidthRequest="200"
+                        BackgroundColor="#2952be"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        TextColor="White"
+                        Command="{Binding NavegarPagcommand}" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

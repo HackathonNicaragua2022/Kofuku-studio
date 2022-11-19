@@ -6,62 +6,67 @@
              BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid x:Name="MainContent">
-            <StackLayout HorizontalOptions="Center"
-                         TranslationY="60">
-                <Image Source="LogoCircle.png"
-                       BackgroundColor="#8D2540"
-                       HeightRequest="36"/>
-            </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="CenterAndExpand">
-                <StackLayout VerticalOptions="CenterAndExpand">
-                    <Label Text="¿A donde vamos hoy?"
-                           FontSize="Medium"
-                           Scale="1.3"
-                           HorizontalOptions="CenterAndExpand"
-                           TextColor="#696969"
-                           Margin="0,0,0,0"
-                           FontAttributes="Bold" />
-                    <Button CornerRadius="20"
-                            Margin="0,20,0,0"
-                            Text="Planear gira"
-                            FontSize="Medium"
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            BackgroundColor="#e8e8e8"
-                            HorizontalOptions="Center"
-                            Scale="1.1"
-                            Command="{Binding commandPlanearGira}" />
-                </StackLayout>
-                <StackLayout Margin="0,20,0,0"
-                             VerticalOptions="Center"
-                             HorizontalOptions="Fill">
-                    <Label Text="Podemos ir a..."
-                           HorizontalOptions="Fill"
-                           Margin="30,0,0,0" />
-                    <Frame CornerRadius="20"
-                           Scale="0.9"
-                           BackgroundColor="#d9e494">
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="cuadrito.jpg"
-                                   Aspect="Fill" />
-                            <StackLayout>
-                                <Label Text="San Juan del Sur"
-                                       FontSize="Title" />
-                                <Button Text="Aceptar"
-                                        FontSize="Large"
-                                        FontAttributes="Bold"
-                                        TextColor="black"
-                                        CornerRadius="20"
-                                        BackgroundColor="#e8e8e8"
-                                        Opacity="0.87 "
-                                        Scale="0.8"
-                                        VerticalOptions="EndAndExpand" />
-                            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout HorizontalOptions="Center"
+                                 Margin="0,60,0,0">
+                        <Image Source="LogoNombre2"
+                               HeightRequest="36" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="CenterAndExpand">
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Label Text="¿A donde vamos hoy?"
+                                   FontSize="Medium"
+                                   Scale="1.3"
+                                   HorizontalOptions="CenterAndExpand"
+                                   TextColor="#696969"
+                                   Margin="0,0,0,0"
+                                   FontAttributes="Bold" />
+                            <Button CornerRadius="20"
+                                    Margin="0,20,0,0"
+                                    Text="Planear gira"
+                                    FontSize="Medium"
+                                    TextColor="White"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="#2952be"
+                                    HorizontalOptions="Center"
+                                    Scale="1.1"
+                                    Command="{Binding commandPlanearGira}" />
                         </StackLayout>
-                    </Frame>
+                        <StackLayout Margin="0,20,0,0"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Fill">
+                            <Label Text="Podemos ir a..."
+                                   HorizontalOptions="Fill"
+                                   Margin="30,0,0,0" />
+                            <Frame CornerRadius="20"
+                                   Scale="0.9"
+                                   BackgroundColor="#d9e494">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame CornerRadius="20" WidthRequest="120">
+                                        <Image Source="cuadrito.jpg"
+                                               Aspect="AspectFill" Scale="1.52"/>
+                                    </Frame>
+                                    <StackLayout>
+                                        <Label Text="San Juan del Sur"
+                                               FontSize="Title" />
+                                        <Button Text="Aceptar"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                TextColor="black"
+                                                CornerRadius="20"
+                                                BackgroundColor="#e8e8e8"
+                                                Opacity="0.87 "
+                                                Scale="0.8"
+                                                VerticalOptions="EndAndExpand" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

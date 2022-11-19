@@ -16,6 +16,7 @@ namespace Descubre_Nica.Droid
         Icon = "@mipmap/icon", 
         Theme = "@style/Splashtema", 
         MainLauncher = true, 
+        HardwareAccelerated = true,
         ConfigurationChanges = ConfigChanges.ScreenSize)]
     public class SplashScreen : Activity
     {

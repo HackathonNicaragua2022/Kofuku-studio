@@ -6,77 +6,97 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <Grid>
-            <StackLayout >
-                <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="50">
-                    <ImageButton Source="flechitaOscura.png" Rotation="90" BackgroundColor="White" TranslationX="5"
-                                 Command="{Binding BackCommand}"/>
-                    <Label Text="Informacion del sitio" FontSize="20" HorizontalOptions="CenterAndExpand" TranslationY="10" TranslationX="-10"/>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             BackgroundColor="White"
+                             HeightRequest="50">
+                    <ImageButton Source="flechitaOscura.png"
+                                 Rotation="90"
+                                 BackgroundColor="Transparent"
+                                 TranslationX="5"
+                                 Command="{Binding BackCommand}" />
+                    <Label Text="Informacion del sitio"
+                           FontSize="20"
+                           HorizontalOptions="CenterAndExpand"
+                           TranslationY="12"
+                           BackgroundColor="Transparent"
+                           TranslationX="-10" />
                 </StackLayout>
                 <ScrollView>
                     <StackLayout>
-                        <Label Text="Hotel Hacienda san pedro" 
-                                FontSize="Large" 
-                                FontAttributes="Bold" 
-                                HorizontalOptions="Center"
-                                Margin="0,20,0,10"/>
-
-                        <Frame CornerRadius="30" HorizontalOptions="Center" WidthRequest="350" HeightRequest="190">
-                            <Image Source="cuadrito2" Scale="1.3" Aspect="Fill"/>
-                        </Frame>
-
-                        <StackLayout Margin="0,20,0,0" HorizontalOptions="Center">
-                            <Button Text="¿Como Llegar?"
-                                    TextColor="White"
-                                    FontAttributes="Bold"
-                                    BackgroundColor="#2952be"
-                                    CornerRadius="20"
-                                    HorizontalOptions="End"
-                                    TranslationX="60"/>
-                            <Label Margin="0,10,0,0"
-                                   Text="Descripcion" 
-                                   FontSize="20"
-                                   TextColor="#ACACAC"/>
-                            <Label BackgroundColor="#5A5A5A" 
-                                   HorizontalOptions="Start" 
-                                   HeightRequest="0.5"  
-                                   WidthRequest="280"/>
-                            <Label Text="Es un Hotel Boutique con exhibición permanentes de
-                                   Ver más."
-                                   TextColor="#4B7E00"
-                                   WidthRequest="280"
-                                   FontSize="16"/>
-                            <Label Margin="0,10,0,0"
-                                   Text="Comentarios"
-                                   FontSize="20"
-                                   TextColor="#ACACAC" />
-                            <StackLayout Orientation="Horizontal">
-                                    <Frame BackgroundColor="#ACACAC"
-                                           HorizontalOptions="Start"
-                                           HeightRequest="20"
-                                           CornerRadius="30">
-                                        <Image Source="usuario.png" />
-                                    </Frame>
-                                <Frame Margin="20,0,0,0"
-                                       CornerRadius="20"
-                                       WidthRequest="100"
-                                       HeightRequest="0"
-                                       BackgroundColor="#ACACAC"/>
-                            </StackLayout>
-                            
-                            <StackLayout Orientation="Horizontal" Margin="0,20">
-                                <Frame BackgroundColor="#ACACAC"
-                                       HorizontalOptions="Start"
-                                       HeightRequest="20"
-                                       CornerRadius="30">
-                                    <Image Source="usuario.png" />
+                        <ScrollView>
+                            <StackLayout>
+                                <Label Text="Hotel Hacienda san pedro"
+                                       FontSize="Large"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       Margin="0,20,0,10" />
+                                <Frame CornerRadius="30"
+                                       HorizontalOptions="Center"
+                                       WidthRequest="260"
+                                       HeightRequest="150">
+                                    <Image Source="cuadrito2"
+                                           Scale="1.3"
+                                           Aspect="Fill" />
                                 </Frame>
-                                <Frame Margin="20,0,0,0"
-                                       CornerRadius="20"
-                                       WidthRequest="100"
-                                       HeightRequest="0"
-                                       BackgroundColor="#ACACAC" />
+
+                                <StackLayout Margin="0,20,0,0"
+                                             HorizontalOptions="Center">
+                                    <Button Text="¿Como Llegar?"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            BackgroundColor="#2952be"
+                                            CornerRadius="20"
+                                            HorizontalOptions="End"
+                                            Margin="0,0,-10,0" />
+                                    <Label Margin="0,10,0,0"
+                                           Text="Descripcion"
+                                           FontSize="20"
+                                           TextColor="#ACACAC" />
+                                    <Label BackgroundColor="#5A5A5A"
+                                           HorizontalOptions="Start"
+                                           HeightRequest="0.5"
+                                           WidthRequest="280" />
+                                    <Label Text="Es un Hotel Boutique con exhibición permanentes de
+                                   Ver más."
+                                           TextColor="#4B7E00"
+                                           WidthRequest="280"
+                                           FontSize="16" />
+                                    <Label Margin="0,10,0,0"
+                                           Text="Comentarios"
+                                           FontSize="20"
+                                           TextColor="#ACACAC" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="#ACACAC"
+                                               HorizontalOptions="Start"
+                                               HeightRequest="20"
+                                               CornerRadius="30">
+                                            <Image Source="usuario.png" />
+                                        </Frame>
+                                        <Frame Margin="20,0,0,0"
+                                               CornerRadius="20"
+                                               WidthRequest="100"
+                                               HeightRequest="0"
+                                               BackgroundColor="#ACACAC" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal"
+                                                 Margin="0,20">
+                                        <Frame BackgroundColor="#ACACAC"
+                                               HorizontalOptions="Start"
+                                               HeightRequest="20"
+                                               CornerRadius="30">
+                                            <Image Source="usuario.png" />
+                                        </Frame>
+                                        <Frame Margin="20,0,0,0"
+                                               CornerRadius="20"
+                                               WidthRequest="100"
+                                               HeightRequest="0"
+                                               BackgroundColor="#ACACAC" />
+                                    </StackLayout>
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
+                        </ScrollView>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>

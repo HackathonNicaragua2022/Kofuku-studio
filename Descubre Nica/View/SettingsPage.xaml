@@ -8,15 +8,36 @@
     <ContentPage.Content>
         <Grid x:Name="MainContent">
             <StackLayout>
-                <Label Text="DescubreNica"
-                            FontSize="Medium" 
-                            Scale="1.7" 
-                            FontAttributes="Bold"
-                            TextColor="#428D52" HorizontalOptions="Center" TranslationY="60"/>
-                <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="50">
+                <StackLayout Margin="0,60,0,0">
+                    <Image Source="LogoNombre2"
+                           HeightRequest="36" />
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             IsEnabled="False"
+                             HorizontalOptions="CenterAndExpand">
+                    <StackLayout VerticalOptions="CenterAndExpand" TranslationY="90">
+                        <Label Text="¿A donde vamos hoy?"
+                               FontSize="Medium"
+                               Scale="1.3"
+                               HorizontalOptions="CenterAndExpand"
+                               TextColor="#696969"
+                               Margin="0,0,0,0"
+                               FontAttributes="Bold" />
+                        <Button CornerRadius="20"
+                                Margin="0,20,0,0"
+                                Text="Planear gira"
+                                FontSize="Medium"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                BackgroundColor="#2952be"
+                                HorizontalOptions="Center"
+                                Scale="1.1" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="70">
                     <Frame CornerRadius="20"
-                           BackgroundColor="#2952be" HeightRequest="230" WidthRequest="150" VerticalOptions="End">
-                        <StackLayout>
+                           BackgroundColor="#2952be" HeightRequest="200" WidthRequest="150" VerticalOptions="End">
+                        <StackLayout TranslationY="-10">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png"/>
                                 <Button Text="CONTACTO" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>

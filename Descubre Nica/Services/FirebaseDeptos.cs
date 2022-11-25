@@ -17,7 +17,6 @@ namespace Descubre_Nica.Services
                 .Child("Departamentos")
                 .OnceAsync<MDepartamentos>()).Select(item => new MDepartamentos
                 {
-                    DeptoId = item.Object.DeptoId,
                     Nombre = item.Object.Nombre
                 }).ToList();
         }

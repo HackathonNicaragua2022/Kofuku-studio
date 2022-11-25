@@ -152,9 +152,9 @@ namespace Descubre_Nica.ViewModel
                 await Application.Current.MainPage.DisplayAlert("Correcto", "Bienvenido " + _NUser.ToString() + " a Descubre Nica", "Ok");
                 await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await App.Current.MainPage.DisplayAlert("Alerta", ex.Message, "OK");
+                await App.Current.MainPage.DisplayAlert("Alerta", "Este correo ya esta registrado", "OK");
             }
         }
 

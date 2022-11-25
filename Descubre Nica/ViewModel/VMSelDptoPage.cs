@@ -14,7 +14,6 @@ namespace Descubre_Nica.ViewModel
         FirebaseDeptos firebasedeptos = new FirebaseDeptos();
 
         #region Variables
-        public string _depto;
         public bool isRefreshing = false;
         public object listViewSource;
         #endregion
@@ -25,16 +24,12 @@ namespace Descubre_Nica.ViewModel
         }
         public VMSelDptoPage()
         {
-            LoadData();
+            _=LoadData();
         }
         #endregion
         #region Objetos
 
-        public string Depto
-        {
-            get { return _depto; }
-            set { SetValue(ref _depto, value); }
-        }
+        
         public object ListViewSource
         {
 

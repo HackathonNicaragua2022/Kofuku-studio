@@ -67,7 +67,7 @@
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
                                                 <StackLayout  Grid.Column="1" Grid.Row="0" HorizontalOptions="Center"           VerticalOptions="Center" Orientation="Vertical">
-                                                    <Label Text="{Binding Depto}"  FontSize="12"  />
+                                                    <Label Text="{Binding Nombre}"  FontSize="12"  />
                                                 </StackLayout>
                                             </Grid>
 

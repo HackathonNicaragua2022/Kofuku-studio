@@ -77,9 +77,9 @@ namespace Descubre_Nica.ViewModel
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
                 await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+                await App.Current.MainPage.DisplayAlert("Alert", "Correo y contraseña no validos", "OK");
             }
         }
 

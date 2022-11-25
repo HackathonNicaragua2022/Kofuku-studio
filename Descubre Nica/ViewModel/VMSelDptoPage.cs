@@ -9,14 +9,14 @@ using Xamarin.Forms;
 
 namespace Descubre_Nica.ViewModel
 {
-    internal class VMSelDptoPage : BaseViewModel
+    public class VMSelDptoPage : BaseViewModel
     {
         FirebaseDeptos firebasedeptos = new FirebaseDeptos();
 
         #region Variables
+        public string _depto;
+        public bool isRefreshing = false;
         public object listViewSource;
-
-        public string _nombre;
         #endregion
         #region Constructores
         public VMSelDptoPage(INavigation navigation)
@@ -25,14 +25,29 @@ namespace Descubre_Nica.ViewModel
         }
         public VMSelDptoPage()
         {
-            _ = LoadData();
+            LoadData();
         }
         #endregion
         #region Objetos
-        public string Texto
+
+        public string Depto
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get { return _depto; }
+            set { SetValue(ref _depto, value); }
+        }
+        public object ListViewSource
+        {
+
+            get { return this.listViewSource; }
+            set
+            {
+                SetValue(ref this.listViewSource, value);
+            }
+        }
+        public bool IsRefreshing
+        {
+            get { return isRefreshing; }
+            set { SetValue(ref this.isRefreshing, value); }
         }
         #endregion
         #region Procesos
@@ -51,13 +66,13 @@ namespace Descubre_Nica.ViewModel
         }
         public async Task LoadData()
         {
-            this.listViewSource = await firebasedeptos.GetAllMDepartamentos();
+            this.ListViewSource = await firebasedeptos.GetAllMDepartamentos();
         }
 
         #endregion
         #region Comandos
-        public ICommand CommandAceptar => new Command(async () => await BTAceptar());
-        public ICommand CommandSiteInfo => new Command(async () => await BTSiteInfo());
+        public ICommand commandAceptar => new Command(async () => await BTAceptar());
+        public ICommand commandSiteInfo => new Command(async () => await BTSiteInfo());
         public ICommand BackCommand => new Command(async () => await Volver());
         #endregion
 

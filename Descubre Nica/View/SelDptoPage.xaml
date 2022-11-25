@@ -50,21 +50,31 @@
                                HorizontalOptions="Start"
                                WidthRequest="250"
                                BackgroundColor="#e8e8e8">
-                            <ScrollView>
-                                <StackLayout>
-                                    <CollectionView >
-                                        <CollectionView.ItemTemplate>
-                                            <DataTemplate >
-                                                <ScrollView>
-                                                    <StackLayout>
-                                                        <Label Text="{Binding Nombre}" FlyoutItem.IsVisible="True"/>
-                                                    </StackLayout>
-                                                </ScrollView>
-                                            </DataTemplate>
-                                        </CollectionView.ItemTemplate>
-                                    </CollectionView>
-                                </StackLayout>
-                            </ScrollView>
+                            <ListView
+                                ItemsSource="{Binding ListViewSource}"
+                                HasUnevenRows="True"
+                                IsPullToRefreshEnabled="True"
+                                IsRefreshing="{Binding IsRefreshing}">
+                                <ListView.ItemTemplate >
+                                    <DataTemplate  >
+                                        <ViewCell>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="60"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout  Grid.Column="1" Grid.Row="0" HorizontalOptions="Center"           VerticalOptions="Center" Orientation="Vertical">
+                                                    <Label Text="{Binding Depto}"  FontSize="12"  />
+                                                </StackLayout>
+                                            </Grid>
+
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </Frame>
                         <Button Text="Aceptar"
                                 BackgroundColor="#2952be"
@@ -74,7 +84,7 @@
                                 FontAttributes="Bold"
                                 CornerRadius="20"
                                 WidthRequest="200"
-                                Command="{Binding CommandAceptar}" />
+                                Command="{Binding commandAceptar}" />
                     </StackLayout>
                 </StackLayout>
             </SwipeView>

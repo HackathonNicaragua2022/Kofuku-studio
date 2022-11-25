@@ -35,18 +35,25 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
-    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidKeyStore>false</AndroidKeyStore>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
-    <AndroidSigningKeyStore>C:\Users\Jonh Torrez\AppData\Local\Xamarin\Mono for Android\Keystore\DescubreNicaCertificadodeNacimiento\DescubreNicaCertificadodeNacimiento.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>123456</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>DescubreNicaCertificadoDeNacimiento</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>123456</AndroidSigningKeyPass>
-    <AndroidApkSignerAdditionalArguments>NingunoPaseBuenDia</AndroidApkSignerAdditionalArguments>
+    <AndroidSigningKeyStore>
+    </AndroidSigningKeyStore>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
+    <AndroidApkSignerAdditionalArguments>
+    </AndroidApkSignerAdditionalArguments>
     <DocumentationFile>
     </DocumentationFile>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

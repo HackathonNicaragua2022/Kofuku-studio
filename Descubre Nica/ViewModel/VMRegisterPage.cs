@@ -46,6 +46,7 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Objetos
+
         public string Correo
         {
             get { return this._Correo; }

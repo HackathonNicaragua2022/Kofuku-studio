@@ -76,6 +76,11 @@ namespace Descubre_Nica.ViewModel
 
                 Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
                 await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+                string band = "1";
+
+                Application.Current.Properties["LoginBanda"] = band;
+                Application.Current.Properties["LoginCorreo"] = _correo;
+                await Navigation.PushAsync(new LoginPage());
             }
             catch (Exception)
             {

@@ -6,7 +6,7 @@
              BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid>
-            <SwipeView>
+            <ScrollView>
                 <StackLayout TranslationX="10"
                              TranslationY="30">
                     <Image Source="FlechitaOscura.png"
@@ -87,7 +87,7 @@
                                 Command="{Binding commandAceptar}" />
                     </StackLayout>
                 </StackLayout>
-            </SwipeView>
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

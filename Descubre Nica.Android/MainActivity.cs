@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.OS;
 using Plugin.CurrentActivity;
 using CarouselView.FormsPlugin.Droid;
+using Android.Content.Res;
+using AndroidX.Browser.Trusted;
 
 namespace Descubre_Nica.Droid
 {

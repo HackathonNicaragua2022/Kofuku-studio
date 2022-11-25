@@ -17,7 +17,7 @@ namespace Descubre_Nica.Droid
         Theme = "@style/Splashtema", 
         MainLauncher = true, 
         HardwareAccelerated = true,
-        ConfigurationChanges = ConfigChanges.ScreenSize)]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class SplashScreen : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

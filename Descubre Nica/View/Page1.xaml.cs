@@ -97,7 +97,12 @@ namespace Descubre_Nica.View
         }
         public async Task NavToLogin()
         {
+            string band = "1";
+
+            Application.Current.Properties["banda"] = band;
             await Navigation.PushAsync(new LoginPage());
+            
+
         }
 
         public ICommand NavToLoginCommand => new Command(async () => await NavToLogin());

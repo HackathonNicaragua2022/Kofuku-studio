@@ -47,9 +47,9 @@ namespace Descubre_Nica.ViewModel
             else
                 this.IsVisibleComoLlegar = false;
         }
-        public async Task ProcesoAsyncrono()
+        public async Task Volver()
         {
-            await DisplayAlert("titulo", "mensaje", "cancelar");
+            await Navigation.PopAsync();
         }
         public void ProcesoSimple()
         {
@@ -57,7 +57,7 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Comandos
-        public ICommand ProcesoAsyncCommand => new Command(async () => await ProcesoAsyncrono());
+        public ICommand BackCommand => new Command(async () => await Volver());
         public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
         public ICommand IsVisibleRutasCommand => new Command(ValidarRutas);
         public ICommand IsVisibleComoLlegarCommand => new Command(ValidarComoLlegar);

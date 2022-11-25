@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Descubre_Nica.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,7 @@ namespace Descubre_Nica.View
         public HistorialPage()
         {
             InitializeComponent();
+            BindingContext = new VMHistorialPage(Navigation);
         }
     }
 }

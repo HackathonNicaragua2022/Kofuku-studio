@@ -44,7 +44,10 @@
                                    Scale="0.9"
                                    BackgroundColor="#d9e494">
                                 <StackLayout Orientation="Horizontal">
-                                    <Frame CornerRadius="20" WidthRequest="120">
+                                    <Frame CornerRadius="20"
+                                           WidthRequest="120"
+                                           BackgroundColor="#d9e494"
+                                           HasShadow="False">
                                         <Image Source="cuadrito.jpg"
                                                Aspect="AspectFill" Scale="1.52"/>
                                     </Frame>

@@ -52,30 +52,17 @@
                                BackgroundColor="#e8e8e8">
                             <ScrollView>
                                 <StackLayout>
-                                    <Label Text="Casa de cultura
-                                       Dirección: del parque..."
-                                           FontAttributes="Bold" />
-                                    <Button Text="Hotel San Pedro
-                                        Dirección: Área central..."
-                                            TextColor="White"
-                                            WidthRequest="600"
-                                            HorizontalOptions="Start"
-                                            FontAttributes="Bold"
-                                            BackgroundColor="#2952be"
-                                            TextTransform="None"
-                                            Command="{Binding commandSiteInfo}" />
-                                    <Label Text="Iglesia Cátolica
-                                       Dirección: Costado oeste..."
-                                           FontAttributes="Bold" />
-                                    <Label Text="AMLAE
-                                       Direccion: Costado Norte de..."
-                                           FontAttributes="Bold" />
-                                    <Label Text="Pizza TOGO
-                                       Dirección: Costado este Keis..."
-                                           FontAttributes="Bold" />
-                                    <Label Text="Molino
-                                       Dirección: Keiser University..."
-                                           FontAttributes="Bold" />
+                                    <CollectionView >
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate >
+                                                <ScrollView>
+                                                    <StackLayout>
+                                                        <Label Text="{Binding Nombre}" FlyoutItem.IsVisible="True"/>
+                                                    </StackLayout>
+                                                </ScrollView>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
                                 </StackLayout>
                             </ScrollView>
                         </Frame>
@@ -87,7 +74,7 @@
                                 FontAttributes="Bold"
                                 CornerRadius="20"
                                 WidthRequest="200"
-                                Command="{Binding commandAceptar}" />
+                                Command="{Binding CommandAceptar}" />
                     </StackLayout>
                 </StackLayout>
             </SwipeView>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1010995626446",
+    "project_id": "descubre-nica-190d7",
+    "storage_bucket": "descubre-nica-190d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010995626446:android:57a82c3becdd65cccbeb9f",
+        "android_client_info": {
+          "package_name": "com.companyname.descubre_nica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010995626446-birqb1i4buol3452pn25m5vh701bjcj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.descubre_nica",
+            "certificate_hash": "1655b7c0e7caddc137ee3b824f4a7f6ffe08589f"
+          }
+        },
+        {
+          "client_id": "1010995626446-kr6vbgvdgbubulpd9fvgtd6tjpoo72m4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShqu1iNFJhSy1Jvoqn7vWpwEaUsRFtMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010995626446-kr6vbgvdgbubulpd9fvgtd6tjpoo72m4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

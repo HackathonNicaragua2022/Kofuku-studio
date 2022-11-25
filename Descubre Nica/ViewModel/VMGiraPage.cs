@@ -11,7 +11,8 @@ namespace Descubre_Nica.ViewModel
     {
 
         #region Variables
-        public string _Texto;
+        public bool _isVisiblerutas=false;
+        public bool _isVisiblecomollegar=false;
         #endregion
         #region Constructores
         public VMGiraPage(INavigation navigation)
@@ -20,13 +21,32 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Objetos
-        public string Texto
+        public bool IsVisibleRutas
         {
-            get { return _Texto; }
-            set { SetValue(ref _Texto, value); }
+            get { return _isVisiblerutas; }
+            set { SetValue(ref _isVisiblerutas, value); }
+        }
+        public bool IsVisibleComoLlegar
+        {
+            get { return _isVisiblecomollegar; }
+            set { SetValue(ref _isVisiblecomollegar, value); }
         }
         #endregion
         #region Procesos
+        public void ValidarRutas()
+        {
+            if(IsVisibleRutas==false)
+                this.IsVisibleRutas = true;
+            else
+                this.IsVisibleRutas=false;
+        }
+        public void ValidarComoLlegar()
+        {
+            if (IsVisibleComoLlegar == false)
+                this.IsVisibleComoLlegar = true;
+            else
+                this.IsVisibleComoLlegar = false;
+        }
         public async Task ProcesoAsyncrono()
         {
             await DisplayAlert("titulo", "mensaje", "cancelar");
@@ -39,6 +59,8 @@ namespace Descubre_Nica.ViewModel
         #region Comandos
         public ICommand ProcesoAsyncCommand => new Command(async () => await ProcesoAsyncrono());
         public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
+        public ICommand IsVisibleRutasCommand => new Command(ValidarRutas);
+        public ICommand IsVisibleComoLlegarCommand => new Command(ValidarComoLlegar);
         #endregion
 
     }

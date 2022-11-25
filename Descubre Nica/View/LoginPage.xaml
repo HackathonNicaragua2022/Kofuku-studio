@@ -28,7 +28,7 @@
                                    Margin="30,0,0,0"
                                    TextColor="#496BC5"
                                    FontAttributes="Bold"
-                                   Text="{Binding Usuario}" />
+                                   Text="{Binding Correo}" />
                         </StackLayout>
                     </Frame>
                     <Frame VerticalOptions="Center"
@@ -66,7 +66,7 @@
                             BackgroundColor="#2952be"
                             FontAttributes="Bold"
                             FontSize="20"
-                            Command="{Binding NavegarPagcommand}" />
+                            Command="{Binding LoginCommand}" />
                     <Button Text="Registrate"
                             VerticalOptions="Center"
                             HorizontalOptions="Center"

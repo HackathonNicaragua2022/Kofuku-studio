@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.descubre_nica" android:installLocation="internalOnly">
-	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="31" />
-	<application android:label="Descubre_Nica.Android" android:theme="@style/MainTheme" android:icon="@mipmap/LogoOrigin"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.descubre_nica" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+	<application android:label="Descubre Nica" android:theme="@style/MainTheme" android:icon="@mipmap/LogoOrigin"></application>
 </manifest>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="Descubre_Nica.View.Page1"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <cv:CarouselViewControl x:Name="cvWalkthrough" ShowIndicators="true" IndicatorsShape="Circle" IndicatorsTintColor="White"
+                                CurrentPageIndicatorTintColor="Blue" Orientation="Horizontal" InterPageSpacing="0" 
+                                ItemsSource="{Binding WalkthroughItems}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                AnimateTransition="True" VerticalIndicatorsPosition="Right" HorizontalIndicatorsPosition="Bottom" >
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Source="{Binding Image}" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                            <StackLayout Orientation="Vertical" Spacing="20" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="300" Margin="20,50">
+                                <Frame HasShadow="False" BackgroundColor="#FF0088" CornerRadius="15" Padding="0" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="100" HeightRequest="30">
+                                    <Label Text="{Binding Heading}" FontSize="14" TextColor="White" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                </Frame>
+                                <Label x:Name="CaptionTxt" Text="{Binding Caption}" FontSize="20" TextColor="White" Margin="0,0,0,70"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+            <Image Source="LogoNombre.jpg" Aspect="AspectFit"  Scale="0.7"  HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,90"/>
+            <Button Text="Vamonos Pues!" BackgroundColor="#2952be" CornerRadius="30" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" Margin="0,0,0,40"  Command="{Binding NavToLoginCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

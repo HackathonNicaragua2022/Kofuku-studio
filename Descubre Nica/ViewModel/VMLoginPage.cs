@@ -6,6 +6,10 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Descubre_Nica.View;
 using Descubre_Nica.Model;
+using Firebase.Auth;
+using CommunityToolkit.Mvvm.Input;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace Descubre_Nica.ViewModel
 {
@@ -13,9 +17,8 @@ namespace Descubre_Nica.ViewModel
     {
 
         #region Variables
-        public string _Usuario;
+        public string _correo;
         public string _contraseña;
-        public List<MLogin> listUsers { get; set; }
 
         #endregion
         #region Constructores
@@ -26,42 +29,65 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Objetos
-        public string Usuario
+        public string Correo
         {
-            get { return _Usuario; }
-            set { SetValue(ref _Usuario, value); }
+            get { return this._correo; }
+            set { SetValue(ref this._correo, value); }
         }
         public string Contraseña
         {
-            get { return _contraseña; }
-            set { SetValue(ref _contraseña, value); }
+            get { return this._contraseña; }
+            set { SetValue(ref this._contraseña, value); }
         }
         #endregion
         #region Procesos
-        public async Task Navegarpag()
+        public ICommand LoginCommand
         {
-            if (Validar())
+            get
             {
-                await Navigation.PushAsync(new MainPage());
-            }
-            else
-            {
-                await DisplayAlert("Alerta", "Llene todo los campos", "OK");
+                return new RelayCommand(Login);
             }
         }
+        public async void Login()
+        {
+            if (string.IsNullOrEmpty(this._correo))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error", "Debes ingresar tu correo electronico", "Aceptar"
+                );
+                return;
+            }
+            if (string.IsNullOrEmpty(this._contraseña))
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error", "No has ingresado una contraseña todavia", "Aceptar"
+                );
+                return;
+            }
+
+            string WebAPIKey = "AIzaSyDShqu1iNFJhSy1Jvoqn7vWpwEaUsRFtMM";
+
+            var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
+            try
+            {
+                var auth = await authProvider.SignInWithEmailAndPasswordAsync(Correo.ToString(), Contraseña.ToString());
+                var content = await auth.GetFreshAuthAsync();
+                var serializedcontnet = JsonConvert.SerializeObject(content);
+
+                Preferences.Set("MyFirebaseRefreshToken", serializedcontnet);
+                await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
+            }
+        }
+
         public void Transparente()
         {
             DependencyService.Get<VMStatusBar>().Transparente();
         }
 
-        public bool Validar()
-        {
-            if (string.IsNullOrEmpty(Contraseña) || string.IsNullOrEmpty(Usuario))
-            {
-                return false;
-            }
-            return true;
-        }
 
         public async Task NavRegisPage()
         {
@@ -70,7 +96,6 @@ namespace Descubre_Nica.ViewModel
 
         #endregion
         #region Comandos
-        public ICommand NavegarPagcommand => new Command(async () => await Navegarpag());
         public ICommand NavRegisPagecommand => new Command(async () => await NavRegisPage());
         #endregion
 

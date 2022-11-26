@@ -8,7 +8,7 @@
             NavigationPage.HasNavigationBar="False"
             android:TabbedPage.IsSwipePagingEnabled="True"
             BarBackgroundColor="White"
-            SelectedTabColor="Purple"
+            SelectedTabColor="Red"
             UnselectedTabColor="MediumPurple">
 
     <local:HomePage/>

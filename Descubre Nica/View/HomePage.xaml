@@ -1,91 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Descubre_Nica.View.HomePage"
-             NavigationPage.HasNavigationBar="False"
-             IconImageSource="greenHome"
-             BackgroundColor="#ffffff">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Descubre_Nica.View.HomePage" NavigationPage.HasNavigationBar="False" IconImageSource="greenHome" BackgroundColor="#ffffff">
     <ContentPage.Content>
         <Grid x:Name="MainContent">
-            <ScrollView >
-                <StackLayout TabIndex="1" VerticalOptions="End">
+            <ScrollView>
+                <StackLayout TabIndex="1" VerticalOptions="Start">
                     <StackLayout WidthRequest="340">
-                        <StackLayout Orientation="Vertical"
-                                     HorizontalOptions="Fill"
-                                     VerticalOptions="CenterAndExpand"
-                                     Margin="-50,50,-50,0"
-                                     Scale="0.95" TabIndex="3"
-                                     HeightRequest="100">
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="-50,0,-50,30" >
-                                <Label Text="Nombre:"
-                                           FontSize="Medium"
-                                           TextColor="#696969"
-                                           FontAttributes="Bold" />
-                                <Label Text="xxxxxxx"
-                                           VerticalOptions="Center"
-                                           FontSize="Medium"
-                                           TextColor="#696969"
-                                           FontAttributes="Bold" />
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand" Margin="-50,50,-50,0" Scale="0.95" TabIndex="3" HeightRequest="100">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="-50,0,-50,0">
+                                <Label Text="Nombre:" FontSize="25" TextColor="#696969" FontAttributes="Bold" />
+                                <Label Text="xxxxxxx" VerticalOptions="Center" TextColor="#696969" FontAttributes="Bold" FontSize="25" />
                             </StackLayout>
-                            <Image Source="User.png"
-                                   Margin="0,-20,0,0"
-                                   />
-                            
+
+
                         </StackLayout>
 
                     </StackLayout>
-                    <StackLayout HorizontalOptions="Start" Margin="-50,0,-50,0">
-                        
-                        <Grid RowDefinitions="100,*"
-                  Margin="0,10,0,0">
+                    <StackLayout HorizontalOptions="Start" Margin="-50,-70,-50,0">
+                        <Grid RowDefinitions="100,*" Margin="-50,0,-50,0">
 
-                            <Frame Grid.Row="1" WidthRequest="250"
-                       HorizontalOptions="Center"
-                       CornerRadius="15"
-                       Margin="10,-38,10,0"
-                       BackgroundColor="Red"
-                               HasShadow="False">
-                                <StackLayout
-                        Margin="0,105,0,0">
-                                    <Label Text="hola"/>
-                                    <Label Text="hola"
-                               CharacterSpacing="1"
-                               FontSize="20"
-                               Margin="0,0,0,10"/>
+                            <Frame Grid.Row="1" WidthRequest="380" HeightRequest="600" HorizontalOptions="Center" CornerRadius="35" Margin="-50,-38,-50,0" HasShadow="False">
+                                <Frame Margin="0,90,0,0" WidthRequest="360" BackgroundColor="#e8e8e8" HeightRequest="600" CornerRadius="30">
+                                    <StackLayout>
+                                        <Label Text="Mis Logros" Margin="0,20,0,30" FontSize="20" FontAttributes="Bold" />
+                                        <StackLayout Spacing="10">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="80">
+                                                <Button CornerRadius="20" Margin="0,0,0,0" ScaleX="1.6" ScaleY="0.8" BackgroundColor="#ffc03f" />
+                                                <Button CornerRadius="20" Margin="0,0,0,0" ScaleX="1.6" ScaleY="0.8" BackgroundColor="#ffc03f" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="80">
+                                                <Button CornerRadius="20" Margin="0,0,0,0" ScaleX="1.6" ScaleY="0.8" BackgroundColor="#ffc03f" />
+                                                <Button CornerRadius="20" Margin="0,0,0,0" ScaleX="1.6" ScaleY="0.8" BackgroundColor="#ffc03f" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="80" Margin="0,10,0,0">
+                                                <Button CornerRadius="20" Margin="0,0,0,0" ScaleX="1.6" ScaleY="0.8" BackgroundColor="WhiteSmoke" />
+                                                <Button CornerRadius="20" TranslationX="30" Text="Nivel 10" TextColor="White" FontAttributes="Bold" BackgroundColor="#ff2524" Scale="1.2" />
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" Spacing="10" Margin="40,10,0,0">
+                                                <Button CornerRadius="20" Margin="-90,0,0,0" Text="" ScaleX="2.9" ScaleY="0.8" BackgroundColor="WhiteSmoke" />
+                                                <Button CornerRadius="20" Margin="-90,0,0,0" Text="" ScaleX="2.9" ScaleY="0.8" BackgroundColor="WhiteSmoke" />
 
-                                    <Button Text="hola"
-                                CornerRadius="30"
-                                HorizontalOptions="Start"
-                                TextTransform="None"
-                                HeightRequest="40"
-                                BackgroundColor="Blue"
-                                            ></Button>
 
-                                </StackLayout>
+                                            </StackLayout>
+
+                                            <Button Margin="10,130,0,0" CornerRadius="20" Text="Historial de viajes" FontSize="Medium" FontAttributes="Bold" TextColor="#696969" BackgroundColor="Transparent" VerticalOptions="Start" Command="{Binding NavHisPageCommand}" HorizontalOptions="Center" TranslationY="-100"></Button>
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
                             </Frame>
-                            <Image 
-                         Grid.RowSpan="2"
-                         HeightRequest="180"
-                         VerticalOptions="StartAndExpand"
-                               Margin="0,20,0,0"
-                               Source="User.png"
-                               />
-                            
+                            <Image Grid.RowSpan="2" HeightRequest="190" VerticalOptions="StartAndExpand" Margin="0,20,0,0" Source="User.png" />
                         </Grid>
                     </StackLayout>
-                    <Button Margin="10,80,0,0"
-                            CornerRadius="20"
-                            Text="Historial de viajes"
-                            FontSize="Medium"
-                            FontAttributes="Bold"
-                            TextColor="#696969"
-                            VerticalOptions="End"
-                            HorizontalOptions="Start"
-                            TranslationY="-100"
-                            Command="{Binding NavHisPageCommand}" />
+
                 </StackLayout>
             </ScrollView>
-            
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -50,7 +50,8 @@
                                         TextColor="white"
                                         FontAttributes="Bold"
                                         FontSize="Medium"
-                                        BackgroundColor="Transparent" />
+                                        BackgroundColor="Transparent" 
+                                        Command="{Binding NaveContactoCommand}"/>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png" />

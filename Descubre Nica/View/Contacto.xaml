@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Descubre_Nica.View.Contacto"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Margin="0,20,0,0" BackgroundColor="AliceBlue">
+                <ImageButton Source="FlechitaOscura"
+                             Rotation="90"
+                             Margin="0,20,0,0"
+                             HorizontalOptions="Start"
+                             Command="{Binding BackPageCommand}"/>
+                <Label Text="Miembros y contribuidores:"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+                <Frame Margin="30"
+                       BackgroundColor="#D6E68A"
+                       CornerRadius="20">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="30"
+                               BackgroundColor="#FAB326">
+                            <Image Source="Sandra"
+                                   HeightRequest="90" />
+                        </Frame>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Sandra Reyes:"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="Center" />
+                            <Label Text="Diseñadora"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   Margin="20"
+                                   HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="30"
+                       BackgroundColor="#B4D057"
+                       CornerRadius="20">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="30"
+                               BackgroundColor="#887BB0">
+                            <Image Source="Leonela"
+                                   HeightRequest="90" />
+                        </Frame>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Leonela Martinez:"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="Center" />
+                            <Label Text="Diseñadora"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   Margin="20"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="30"
+                       BackgroundColor="#DDFFE7"
+                       CornerRadius="20">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="30"
+                               BackgroundColor="#8FDDE7">
+                            <Image Source="Jonathan"
+                                   HeightRequest="90" />
+                        </Frame>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Jonathan Torrez:"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="Center" />
+                            <Label Text="Desarrollador"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   Margin="20"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="30"
+                       CornerRadius="20"
+                       BackgroundColor="#003F8E">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="30"
+                               BackgroundColor="#05676E">
+                            <Image Source="Joshua"
+                                   HeightRequest="90" />
+                        </Frame>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Joshua Aburto:"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="Center" />
+                            <Label Text="Desarrollador"
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   Margin="20"
+                                   HorizontalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

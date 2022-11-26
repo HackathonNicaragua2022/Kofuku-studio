@@ -20,29 +20,67 @@ namespace Descubre_Nica.ViewModel
         #region Variables
         public bool isRefreshing = false;
         public string _nombre;
-        public ObservableCollection<MDepartamentos> listViewSource;
+        ObservableCollection<MDepartamentos> listViewSource;
         #endregion
         #region Constructores
         public VMSelDptoPage(INavigation navigation)
         {
             Navigation = navigation;
-            MostrarDepartamentos();
+            Mostrarsitios();
+        }
+
+        public List<MSitioTuristico> Listasitios { get; set; }
+
+        public void Mostrarsitios()
+        {
+            Listasitios = new List<MSitioTuristico>()
+            {
+                new MSitioTuristico()
+                {
+                    Nombre = "Palacio Nacional"
+                },
+                new MSitioTuristico()
+                {
+                    Nombre = "Hotel Hacienda San Pedro"
+                },
+                new MSitioTuristico()
+                {
+                    Nombre = "Playa la Boquita"
+                },
+
+                new MSitioTuristico()
+                {
+                    Nombre = "Reloj Diriamba"
+                },
+
+                new MSitioTuristico()
+                {
+                    Nombre = "Puerto Salvador Allende"
+                },
+                
+            };
+            
+        }
+
+        public async Task Seleccionado(MSitioTuristico sitio)
+        {
+           
+            await BTSiteInfo();
         }
         #endregion
         #region Objetos
 
-
-        public ObservableCollection<MDepartamentos> ListViewSource
+        public ObservableCollection<MDepartamentos> ListaDepartamentos
         {
-
-            get { return this.listViewSource; }
+            get { return listViewSource; }
             set
             {
-                SetValue(ref this.listViewSource, value);
+                SetValue(ref listViewSource, value);
                 OnPropertyChanged();
             }
         }
-        
+
+
         public bool IsRefreshing
         {
             get { return isRefreshing; }
@@ -58,7 +96,7 @@ namespace Descubre_Nica.ViewModel
         public async Task MostrarDepartamentos()
         {
             var funcion = new FirebaseDeptos();
-            ListViewSource = await funcion.MostrarDepartamentos();
+            ListaDepartamentos = await funcion.MostrarDepartamentos();
         }
         public async Task BTAceptar()
         {
@@ -81,7 +119,8 @@ namespace Descubre_Nica.ViewModel
         public ICommand commandAceptar => new Command(async () => await BTAceptar());
         public ICommand commandSiteInfo => new Command(async () => await BTSiteInfo());
         public ICommand BackCommand => new Command(async () => await Volver());
-        
+        public ICommand commandAlert => new Command<MSitioTuristico>(async (a) => await Seleccionado(a));
+
         #endregion
 
     }

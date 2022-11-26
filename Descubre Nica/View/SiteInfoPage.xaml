@@ -58,10 +58,10 @@
                                            HeightRequest="0.5"
                                            WidthRequest="280" />
                                     <Label Text="Es un Hotel Boutique con exhibición permanentes de
-                                   Ver más."
+                                   Ver más." 
                                            TextColor="#4B7E00"
                                            WidthRequest="280"
-                                           FontSize="16" />
+                                           FontSize="18" />
                                     <Label Margin="0,10,0,0"
                                            Text="Comentarios"
                                            FontSize="20"

@@ -80,7 +80,6 @@ namespace Descubre_Nica.ViewModel
 
                 Application.Current.Properties["LoginBanda"] = band;
                 Application.Current.Properties["LoginCorreo"] = _correo;
-                await Navigation.PushAsync(new LoginPage());
             }
             catch (Exception)
             {

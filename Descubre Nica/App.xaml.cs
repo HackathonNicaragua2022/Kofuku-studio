@@ -19,7 +19,27 @@ namespace Descubre_Nica
                 string band = Application.Current.Properties["banda"] as string;
                 if (band == "1")
                 {
-                    MainPage = new NavigationPage(new LoginPage());
+                    if(Application.Current.Properties.ContainsKey("LoginBanda"))
+                    {
+                        string LoginBand = Application.Current.Properties["LoginBanda"] as string;
+                        if(LoginBand=="1")
+                        {
+                            MainPage = new NavigationPage(new MainPage());
+                        }
+                        else
+                        {
+                            MainPage = new NavigationPage(new LoginPage());
+                        }
+                    }
+                    else
+                    {
+                        MainPage = new NavigationPage(new LoginPage());
+                    }
+                    
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new Page1());
                 }
             }
             else

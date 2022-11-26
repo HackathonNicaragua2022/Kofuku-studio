@@ -1,7 +1,9 @@
 ﻿using Descubre_Nica.Model;
 using Firebase.Database;
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,29 @@ namespace Descubre_Nica.Services
                 {
                     Nombre = item.Object.Nombre
                 }).ToList();
+        }
+
+        public async Task<ObservableCollection<MDepartamentos>> MostrarDepartamentos()
+        {
+            
+            var data = await Task.Run(() => firebase
+                .Child("Departamentos")
+                .AsObservable<MDepartamentos>()
+                .AsObservableCollection()
+                );
+            return data;
+
+        }
+
+        public async Task Adddpto(MDepartamentos _mDeptos)
+        {
+            await firebase
+                .Child("Departamentos")
+                .PostAsync(new MDepartamentos()
+                {
+                    DeptoId = Guid.NewGuid(),
+                    Nombre = _mDeptos.Nombre,
+                });
         }
 
         FirebaseClient firebase;

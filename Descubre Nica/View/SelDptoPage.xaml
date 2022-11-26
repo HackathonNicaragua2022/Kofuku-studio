@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:Descubre_Nica.ViewModel" x:DataType="viewmodel:VMSelDptoPage"
              x:Class="Descubre_Nica.View.SelDptoPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#ffffff">
@@ -50,31 +50,42 @@
                                HorizontalOptions="Start"
                                WidthRequest="250"
                                BackgroundColor="#e8e8e8">
-                            <ListView
-                                ItemsSource="{Binding ListViewSource}"
-                                HasUnevenRows="True"
-                                IsPullToRefreshEnabled="True"
-                                IsRefreshing="{Binding IsRefreshing}">
-                                <ListView.ItemTemplate >
-                                    <DataTemplate  >
-                                        <ViewCell>
-                                            <Grid>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="60"/>
-                                                </Grid.RowDefinitions>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-                                                <StackLayout  Grid.Column="1" Grid.Row="0" HorizontalOptions="Center"           VerticalOptions="Center" Orientation="Vertical">
-                                                    <Label Text="{Binding Nombre}"  FontSize="12"  />
-                                                </StackLayout>
-                                            </Grid>
 
-                                        </ViewCell>
+                            <CollectionView BackgroundColor="#EAEDEC"
+                        Grid.Row="1"
+                       ItemsSource="{Binding ListViewSource}"
+                        Margin="0,0,0,0"
+                        x:Name="lista">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Vertical"
+                                 Span="2"
+                                 HorizontalItemSpacing="10"
+                                 />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid RowDefinitions="100,*"
+                  Margin="0,10,0,0">
+
+                                            <Frame Grid.Row="1" WidthRequest="250"
+                       HorizontalOptions="Center"
+                       CornerRadius="15"
+                       Margin="10,-38,10,0"
+                               HasShadow="False">
+                                                <StackLayout
+                        Margin="0,105,0,0">
+                                                    <Label Text="{Binding Nombre}"/>
+
+                                                </StackLayout>
+                                            </Frame>
+                                            
+                                            
+                                        </Grid>
                                     </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
+                                </CollectionView.ItemTemplate>
+
+                            </CollectionView>
+
                         </Frame>
                         <Button Text="Aceptar"
                                 BackgroundColor="#2952be"
@@ -86,7 +97,11 @@
                                 WidthRequest="200"
                                 Command="{Binding commandAceptar}" />
                     </StackLayout>
+
+                   
                 </StackLayout>
+                
+                
             </ScrollView>
         </Grid>
     </ContentPage.Content>

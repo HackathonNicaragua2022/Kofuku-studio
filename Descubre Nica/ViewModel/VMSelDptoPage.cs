@@ -1,7 +1,11 @@
-﻿using Descubre_Nica.Services;
+﻿using CommunityToolkit.Mvvm.Input;
+using Descubre_Nica.Model;
+using Descubre_Nica.Services;
 using Descubre_Nica.View;
+using Firebase.Auth;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -15,37 +19,47 @@ namespace Descubre_Nica.ViewModel
 
         #region Variables
         public bool isRefreshing = false;
-        public object listViewSource;
+        public string _nombre;
+        public ObservableCollection<MDepartamentos> listViewSource;
         #endregion
         #region Constructores
         public VMSelDptoPage(INavigation navigation)
         {
             Navigation = navigation;
-        }
-        public VMSelDptoPage()
-        {
-            _=LoadData();
+            MostrarDepartamentos();
         }
         #endregion
         #region Objetos
 
-        
-        public object ListViewSource
+
+        public ObservableCollection<MDepartamentos> ListViewSource
         {
 
             get { return this.listViewSource; }
             set
             {
                 SetValue(ref this.listViewSource, value);
+                OnPropertyChanged();
             }
         }
+        
         public bool IsRefreshing
         {
             get { return isRefreshing; }
             set { SetValue(ref this.isRefreshing, value); }
         }
+        public string Nombre
+        {
+            get { return _nombre; }
+            set { SetValue(ref this._nombre, value); }
+        }
         #endregion
         #region Procesos
+        public async Task MostrarDepartamentos()
+        {
+            var funcion = new FirebaseDeptos();
+            ListViewSource = await funcion.MostrarDepartamentos();
+        }
         public async Task BTAceptar()
         {
             await Navigation.PushAsync(new GiraPage());
@@ -59,16 +73,15 @@ namespace Descubre_Nica.ViewModel
         {
             await Navigation.PopAsync();
         }
-        public async Task LoadData()
-        {
-            this.ListViewSource = await firebasedeptos.GetAllMDepartamentos();
-        }
+
+        
 
         #endregion
         #region Comandos
         public ICommand commandAceptar => new Command(async () => await BTAceptar());
         public ICommand commandSiteInfo => new Command(async () => await BTSiteInfo());
         public ICommand BackCommand => new Command(async () => await Volver());
+        
         #endregion
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Descubre_Nica.View;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +28,12 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Procesos
-        public async Task ProcesoAsyncrono()
+        public async Task Logout()
         {
-            await DisplayAlert("titulo", "mensaje", "cancelar");
+            string band = "0";
+
+            Application.Current.Properties["LoginBanda"] = band;
+            await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
         }
         public void ProcesoSimple()
         {
@@ -37,7 +41,7 @@ namespace Descubre_Nica.ViewModel
         }
         #endregion
         #region Comandos
-        public ICommand ProcesoAsyncCommand => new Command(async () => await ProcesoAsyncrono());
+        public ICommand LogoutCommand => new Command(async () => await Logout());
         public ICommand ProcesoSimpCommand => new Command(ProcesoSimple);
         #endregion
 

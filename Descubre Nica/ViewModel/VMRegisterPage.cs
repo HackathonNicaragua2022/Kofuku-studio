@@ -42,7 +42,7 @@ namespace Descubre_Nica.ViewModel
         }
         public VMRegisterPage()
         {
-            _=LoadData();
+            LoadData();
         }
         #endregion
         #region Objetos
@@ -178,7 +178,7 @@ namespace Descubre_Nica.ViewModel
 
             await Task.Delay(1000);
 
-            _ = LoadData();
+            LoadData();
 
             this.IsRefreshing = false;
         }

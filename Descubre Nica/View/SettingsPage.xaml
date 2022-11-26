@@ -36,7 +36,7 @@
                 </StackLayout>
                 <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="70">
                     <Frame CornerRadius="20"
-                           BackgroundColor="#2952be" HeightRequest="200" WidthRequest="150" VerticalOptions="End">
+                           BackgroundColor="#2952be" HeightRequest="250" WidthRequest="150" VerticalOptions="End">
                         <StackLayout TranslationY="-10">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png"/>
@@ -49,6 +49,11 @@
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png"/>
                                 <Button Text="Ayuda" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Flechita.png"/>
+                                <Button Text="Log Out" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"
+                                  Command="{Binding LogoutCommand}"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>

@@ -10,9 +10,9 @@
                 <StackLayout Orientation="Vertical"
                              VerticalOptions="FillAndExpand"
                              Spacing="20">
-                    <Image Source="LogoCircle.png"
-                           HeightRequest="100" 
-                           Margin="0,0,0,0"/>
+                    <Image Source="LogoOrigin.png"
+                           HeightRequest="60" 
+                           Margin="0,50,0,30"/>
                     <Frame VerticalOptions="Center"
                            CornerRadius="30"
                            Margin="50,0,50,0"
@@ -23,10 +23,10 @@
                                    HeightRequest="50"
                                    HorizontalOptions="Start" />
                             <Entry Placeholder="Usuario"
-                                   PlaceholderColor="#496BC5"
+                                   PlaceholderColor="#452443"
                                    HorizontalOptions="FillAndExpand"
                                    Margin="30,0,0,0"
-                                   TextColor="#496BC5"
+                                   TextColor="#452443"
                                    FontAttributes="Bold"
                                    Text="{Binding Correo}" />
                         </StackLayout>
@@ -41,10 +41,10 @@
                                    HeightRequest="40"
                                    HorizontalOptions="Start" />
                             <Entry Placeholder="Contraseña"
-                                   PlaceholderColor="#496BC5"
+                                   PlaceholderColor="#452443"
                                    HorizontalOptions="FillAndExpand"
                                    Margin="30,0,0,0"
-                                   TextColor="#496BC5"
+                                   TextColor="#452443"
                                    FontAttributes="Bold"
                                    IsPassword="True"
                                    Text="{Binding Contraseña}" />
@@ -63,7 +63,7 @@
                             HeightRequest="60"
                             HorizontalOptions="Center"
                             WidthRequest="200"
-                            BackgroundColor="#2952be"
+                            BackgroundColor="#febf3f"
                             FontAttributes="Bold"
                             FontSize="20"
                             Command="{Binding LoginCommand}" />

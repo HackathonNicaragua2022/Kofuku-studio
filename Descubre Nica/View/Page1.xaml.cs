@@ -60,39 +60,28 @@ namespace Descubre_Nica.View
             {
                 new Walkthrough
                 {
-                    Heading ="Volcan",
-                    Caption = " info",
-                    Image = "Volcan.jpg"
+                    
+                    Image = "Calle.jpg"
                 },
 
                 new Walkthrough
                 {
-                    Heading ="BocaVolcan.jpg",
-                    Caption = " info",
-                    Image = "BocaVolcan.jpg"
+                    
+                    Image = "RioMontana.jpg"
                 },
 
                 new Walkthrough
                 {
-                    Heading ="Playa.jpg",
-                    Caption = " info",
-                    Image = "Playa.jpg"
-                },
+                    Image = "Playa.jpg"},
 
                 new Walkthrough
                 {
-                    Heading ="Cañon.jpg",
-                    Caption = " info",
-                    Image = "Canon.jpg"
-                }
+                    Image = "Canon.jpg"}
                 ,
 
                 new Walkthrough
                 {
-                    Heading ="Catedral.jpg",
-                    Caption = " info",
-                    Image = "Catedral.jpg"
-                }
+                    Image = "Catedral.jpg"}
             });
         }
         public async Task NavToLogin()
@@ -110,8 +99,6 @@ namespace Descubre_Nica.View
 
     public class Walkthrough
     {
-        public string Heading { get; set; }
-        public string Caption { get; set; }
         public string Image { get; set; }
     }
 }

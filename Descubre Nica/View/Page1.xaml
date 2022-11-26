@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <cv:CarouselViewControl x:Name="cvWalkthrough" ShowIndicators="true" IndicatorsShape="Circle" IndicatorsTintColor="White"
-                                CurrentPageIndicatorTintColor="Blue" Orientation="Horizontal" InterPageSpacing="0" 
+                                CurrentPageIndicatorTintColor="red" Orientation="Horizontal" InterPageSpacing="0" 
                                 ItemsSource="{Binding WalkthroughItems}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
                                 AnimateTransition="True" VerticalIndicatorsPosition="Right" HorizontalIndicatorsPosition="Bottom" >
                 <cv:CarouselViewControl.ItemTemplate>
@@ -14,17 +14,13 @@
                         <Grid>
                             <Image Source="{Binding Image}" Aspect="Fill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
                             <StackLayout Orientation="Vertical" Spacing="20" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="300" Margin="20,50">
-                                <Frame HasShadow="False" BackgroundColor="#FF0088" CornerRadius="15" Padding="0" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="100" HeightRequest="30">
-                                    <Label Text="{Binding Heading}" FontSize="14" TextColor="White" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
-                                </Frame>
-                                <Label x:Name="CaptionTxt" Text="{Binding Caption}" FontSize="20" TextColor="White" Margin="0,0,0,70"/>
                             </StackLayout>
                         </Grid>
                     </DataTemplate>
                 </cv:CarouselViewControl.ItemTemplate>
             </cv:CarouselViewControl>
             <Image Source="LogoNombre.jpg" Aspect="AspectFit"  Scale="0.7"  HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,90"/>
-            <Button Text="Vamonos Pues!" BackgroundColor="#2952be" CornerRadius="30" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" Margin="0,0,0,40"  Command="{Binding NavToLoginCommand}"/>
+            <Button Text="Vamonos Pues!" BackgroundColor="#FFFF" CornerRadius="30" HorizontalOptions="Center" VerticalOptions="End" TextColor="#452443" FontAttributes="Bold"  Margin="0,0,0,40"  Command="{Binding NavToLoginCommand}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -72,7 +72,7 @@ namespace Descubre_Nica.View
 
                 new Walkthrough
                 {
-                    Image = "Playa.jpg"},
+                    Image = "Volcan.jpg"},
 
                 new Walkthrough
                 {

@@ -25,7 +25,6 @@ namespace Descubre_Nica.Services
 
         public async Task<ObservableCollection<MDepartamentos>> MostrarDepartamentos()
         {
-            
             var data = await Task.Run(() => firebase
                 .Child("Departamentos")
                 .AsObservable<MDepartamentos>()
@@ -42,7 +41,7 @@ namespace Descubre_Nica.Services
                 .PostAsync(new MDepartamentos()
                 {
                     DeptoId = Guid.NewGuid(),
-                    Nombre = _mDeptos.Nombre,
+                    Nombre= _mDeptos.Nombre,
                 });
         }
 

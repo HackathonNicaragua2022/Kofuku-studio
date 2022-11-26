@@ -9,29 +9,30 @@
             <ScrollView>
                 <StackLayout>
                     <StackLayout HorizontalOptions="Center"
-                                 Margin="0,60,0,0">
-                        <Image Source="LogoNombre2"
+                                 Margin="0,30,0,0">
+                        <Image Source="DescubreNicBag"
                                HeightRequest="36" />
                     </StackLayout>
-                    <StackLayout VerticalOptions="CenterAndExpand"
-                                 HorizontalOptions="CenterAndExpand">
+                    <StackLayout VerticalOptions="StartAndExpand">
                         <StackLayout VerticalOptions="CenterAndExpand">
                             <Label Text="¿A donde vamos hoy?"
                                    FontSize="Medium"
-                                   Scale="1.3"
+                                   Scale="1.4"
                                    HorizontalOptions="CenterAndExpand"
-                                   TextColor="#696969"
-                                   Margin="0,0,0,0"
+                                   TextColor="#8D8D8D"
+                                   Margin="0,50,0,0"
                                    FontAttributes="Bold" />
                             <Button CornerRadius="20"
                                     Margin="0,20,0,0"
                                     Text="Planear gira"
                                     FontSize="Medium"
-                                    TextColor="White"
+                                    TextTransform="None"
+                                    TextColor="#442442"
                                     FontAttributes="Bold"
-                                    BackgroundColor="#2952be"
+                                    BackgroundColor="#E4E4E4"
                                     HorizontalOptions="Center"
                                     Scale="1.1"
+                                    WidthRequest="200"
                                     Command="{Binding commandPlanearGira}" />
                         </StackLayout>
                         <StackLayout Margin="0,20,0,0"
@@ -39,33 +40,58 @@
                                      HorizontalOptions="Fill">
                             <Label Text="Podemos ir a..."
                                    HorizontalOptions="Fill"
+                                   FontAttributes="Bold"
+                                   TextColor="#696969"
                                    Margin="30,0,0,0" />
                             <Frame CornerRadius="20"
-                                   Scale="0.9"
-                                   BackgroundColor="#d9e494">
-                                <StackLayout Orientation="Horizontal">
+                                   BackgroundColor="#E4E4E4"
+                                   Margin="40,0,40,0"
+                                   HeightRequest="215">
+                                <StackLayout>
+                                    <Label Text="San Juan del Sur-Rivas"
+                                           FontAttributes="Bold"
+                                           TextColor="#606060"
+                                           HorizontalOptions="Center"/>
                                     <Frame CornerRadius="20"
-                                           WidthRequest="120"
-                                           BackgroundColor="#d9e494"
-                                           HasShadow="False">
-                                        <Image Source="cuadrito.jpg"
-                                               Aspect="AspectFill" Scale="1.52"/>
+                                           WidthRequest="200"
+                                           HasShadow="False"
+                                           BackgroundColor="#E4E4E4"
+                                           HorizontalOptions="Center">
+                                        <Image Source="cuadrito" 
+                                               Aspect="AspectFill"
+                                               Scale="1.40"
+                                               BackgroundColor="#E4E4E4"/>
                                     </Frame>
-                                    <StackLayout>
-                                        <Label Text="San Juan del Sur"
-                                               FontSize="Title" />
-                                        <Button Text="Aceptar"
-                                                FontSize="Large"
-                                                FontAttributes="Bold"
-                                                TextColor="black"
-                                                CornerRadius="20"
-                                                BackgroundColor="#e8e8e8"
-                                                Opacity="0.87 "
-                                                Scale="0.8"
-                                                VerticalOptions="EndAndExpand" />
-                                    </StackLayout>
+                                    <Button Text="Aceptar"
+                                            BackgroundColor="#FFC03F"
+                                            HorizontalOptions="Start"
+                                            CornerRadius="20"
+                                            TextTransform="None"
+                                            WidthRequest="120"
+                                            Margin="0,10,0,0"/>
                                 </StackLayout>
                             </Frame>
+                            <Label Text="Guias Disponibles"
+                                   FontAttributes="Bold"
+                                   Margin="20,20,0,0"
+                                   TextColor="#606060"/>
+                            <ScrollView>
+                                <Frame CornerRadius="20"
+                                       HasShadow="False"
+                                       BackgroundColor="#E4E4E4"
+                                       HeightRequest="170"
+                                       Margin="40,0,200,0">
+                                    <Grid RowDefinitions="40,40,40,40">
+                                        <Button Text="Francisco Romero" CornerRadius="20"/>
+                                        <Button Text="David Francisco" CornerRadius="20"
+                                                Grid.Row="1" />
+                                        <Button Text="Gabriel Reyes" CornerRadius="20"
+                                                Grid.Row="2" />
+                                        <Button Text="Rolando Melgara" CornerRadius="20"
+                                                Grid.Row="3" />
+                                    </Grid>
+                                </Frame>
+                            </ScrollView>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

@@ -261,5 +261,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Volcan.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\DescubreNicBag.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

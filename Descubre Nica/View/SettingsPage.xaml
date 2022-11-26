@@ -9,13 +9,14 @@
         <Grid x:Name="MainContent">
             <StackLayout>
                 <StackLayout Margin="0,60,0,0">
-                    <Image Source="LogoNombre2"
+                    <Image Source="DescubreNicBag"
                            HeightRequest="36" />
                 </StackLayout>
                 <StackLayout VerticalOptions="CenterAndExpand"
                              IsEnabled="False"
                              HorizontalOptions="CenterAndExpand">
-                    <StackLayout VerticalOptions="CenterAndExpand" TranslationY="90">
+                    <StackLayout VerticalOptions="CenterAndExpand"
+                                 TranslationY="90">
                         <Label Text="¿A donde vamos hoy?"
                                FontSize="Medium"
                                Scale="1.3"
@@ -34,26 +35,47 @@
                                 Scale="1.1" />
                     </StackLayout>
                 </StackLayout>
-                <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" TranslationY="70">
+                <StackLayout HorizontalOptions="EndAndExpand"
+                             VerticalOptions="EndAndExpand"
+                             TranslationY="70">
                     <Frame CornerRadius="20"
-                           BackgroundColor="#2952be" HeightRequest="250" WidthRequest="150" VerticalOptions="End">
+                           BackgroundColor="#2952be"
+                           HeightRequest="250"
+                           WidthRequest="150"
+                           VerticalOptions="End">
                         <StackLayout TranslationY="-10">
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="Flechita.png"/>
-                                <Button Text="CONTACTO" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                                <Image Source="Flechita.png" />
+                                <Button Text="CONTACTO"
+                                        TextColor="white"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        BackgroundColor="Transparent" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="Flechita.png"/>
-                                <Button Text="Información" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                                <Image Source="Flechita.png" />
+                                <Button Text="Información"
+                                        TextColor="white"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        BackgroundColor="Transparent" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="Flechita.png"/>
-                                <Button Text="Ayuda" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"/>
+                                <Image Source="Flechita.png" />
+                                <Button Text="Ayuda"
+                                        TextColor="white"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        BackgroundColor="Transparent" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="Flechita.png"/>
-                                <Button Text="Log Out" TextColor="white" FontAttributes="Bold" FontSize="Medium" BackgroundColor="Transparent"
-                                  Command="{Binding LogoutCommand}"/>
+                                <Image Source="Flechita.png" />
+                                <Button Text="Log Out"
+                                        TextColor="white"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        BackgroundColor="Transparent"
+                                        Command="{Binding LogoutCommand}" />
                             </StackLayout>
                         </StackLayout>
                     </Frame>

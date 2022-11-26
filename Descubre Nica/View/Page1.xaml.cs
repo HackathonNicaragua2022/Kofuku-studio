@@ -74,10 +74,7 @@ namespace Descubre_Nica.View
 
                 new Walkthrough
                 {
-                    Heading ="Playa.jpg",
-                    Caption = " info",
-                    Image = "Playa.jpg"
-                },
+                    Image = "Volcan.jpg"},
 
                 new Walkthrough
                 {

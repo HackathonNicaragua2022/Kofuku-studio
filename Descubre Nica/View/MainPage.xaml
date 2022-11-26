@@ -7,9 +7,9 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             NavigationPage.HasNavigationBar="False"
             android:TabbedPage.IsSwipePagingEnabled="True"
-            BarBackgroundColor="#2952be"
-            SelectedTabColor="Black"
-            UnselectedTabColor="white">
+            BarBackgroundColor="White"
+            SelectedTabColor="Red"
+            UnselectedTabColor="MediumPurple">
 
     <local:HomePage/>
     <local:BagPage/>

@@ -19,7 +19,7 @@
                     </Image>
                     <StackLayout TranslationX="20">
                         <Button CornerRadius="20"
-                                BackgroundColor="#2952be"
+                                BackgroundColor="#452443"
                                 Text="Elegir Departamento"
                                 TextColor="White"
                                 FontAttributes="Bold"
@@ -89,7 +89,7 @@
 
                         </Frame>
                         <Button Text="Aceptar"
-                                BackgroundColor="#2952be"
+                                BackgroundColor="#452443"
                                 HorizontalOptions="Center"
                                 Margin="200,10,50,0"
                                 TextColor="White"

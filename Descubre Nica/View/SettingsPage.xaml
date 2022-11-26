@@ -30,7 +30,7 @@
                                 FontSize="Medium"
                                 TextColor="White"
                                 FontAttributes="Bold"
-                                BackgroundColor="#2952be"
+                                BackgroundColor="#ffc03f"
                                 HorizontalOptions="Center"
                                 Scale="1.1" />
                     </StackLayout>
@@ -39,10 +39,7 @@
                              VerticalOptions="EndAndExpand"
                              TranslationY="70">
                     <Frame CornerRadius="20"
-                           BackgroundColor="#2952be"
-                           HeightRequest="250"
-                           WidthRequest="150"
-                           VerticalOptions="End">
+                           BackgroundColor="#ffc03f" HeightRequest="250" WidthRequest="150" VerticalOptions="End">
                         <StackLayout TranslationY="-10">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="Flechita.png" />

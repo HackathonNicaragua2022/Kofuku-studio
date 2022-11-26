@@ -25,20 +25,17 @@
                         <Label Text="Granada" FontSize="Title"/>
                         <Button Text="Ver mas"
                                 HorizontalOptions="Start"
-                                CornerRadius="20"
-                                BackgroundColor="White" />
+                                CornerRadius="20" BackgroundColor="#ffc03f" />
                         <Label Text="Masaya"
                                FontSize="Title" />
                         <Button Text="Ver mas"
                                 HorizontalOptions="Start"
-                                CornerRadius="20"
-                                BackgroundColor="White" />
+                                CornerRadius="20" BackgroundColor="#ffc03f" />
                         <Label Text="San Juan del Sur"
                                FontSize="Title" />
                         <Button Text="Ver mas"
                                 HorizontalOptions="Start"
-                                CornerRadius="20"
-                                BackgroundColor="White" />
+                                CornerRadius="20" BackgroundColor="#ffc03f" />
                     </StackLayout>
                 </ScrollView>
             </StackLayout>

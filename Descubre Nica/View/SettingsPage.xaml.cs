@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Descubre_Nica.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Descubre_Nica.View
         public SettingsPage()
         {
             InitializeComponent();
+            BindingContext = new VMSettingsPage(Navigation);
         }
     }
 }
